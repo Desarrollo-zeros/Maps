@@ -216,3 +216,47 @@ svg {
   margin:0 auto;
   display:block;
 }
+
+.ee a{
+  text-decoration: none;
+  color: #7a7979;
+}
+
+
+.table-tooltip {
+  pointer-events: none;
+  position: absolute;
+  font-size: 16px;
+  text-align: center;
+  background: #32383e;
+  padding: 20px 20px;
+  z-index: 5;
+  height: auto!important;
+  width: auto!important;
+  line-height: 20px;
+  margin: 0 auto;
+  color: #ffffff;
+  top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #32383e;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: none;
+}
+.table-tooltip.active {
+  display: block;
+}
+.table-tooltip:after {
+  content: "";
+  position: absolute;
+  left: 100% !important;
+  top: 45% !important;
+  width: 35px!important;
+  height: 10px!important;
+  margin-left: -25px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #32383e;
+}

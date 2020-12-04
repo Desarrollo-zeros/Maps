@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a4f951b-d1fa-4c28-8f11-ee65fdc234bd" name="Default Changelist" comment="" />
+    <list default="true" id="9a4f951b-d1fa-4c28-8f11-ee65fdc234bd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iconos/crecimiento.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/iconos/crecimiento.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iconos/grafico-de-lineas.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/iconos/grafico-de-lineas.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iconos/marcador-de-posicion.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/iconos/marcador-de-posicion.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iconos/monedas.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/iconos/monedas.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iconos/trabajo-en-equipo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/iconos/trabajo-en-equipo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +27,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lAXV5d5uH5GckBJXVsmXG6zASk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,6 +73,7 @@
       <workItem from="1607041973883" duration="1152000" />
       <workItem from="1607043159262" duration="83000" />
       <workItem from="1607043294526" duration="25116000" />
+      <workItem from="1607100603011" duration="7817000" />
     </task>
     <servers />
   </component>
@@ -91,9 +105,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607042868701" />
-    <state x="1709" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607068128049">
-      <screen x="1366" y="0" width="1360" height="728" />
+    <state x="449" y="0" width="1167" height="839" key="dock-window-1" timestamp="1607107556422">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="449" y="0" width="1167" height="839" key="dock-window-1/0.0.1600.860@0.0.1600.860" timestamp="1607107556422" />
+    <state x="507" y="163" width="585" height="534" key="find.popup" timestamp="1607107756146">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="507" y="163" width="585" height="534" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1607107756146" />
+    <state x="404" y="58" width="791" height="801" key="search.everywhere.popup" timestamp="1607103293932">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="1709" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1607068128049" />
+    <state x="404" y="58" width="791" height="801" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1607103293932" />
   </component>
 </project>

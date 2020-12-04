@@ -1,13 +1,23 @@
 var colors = ['#007bff','#28a745','#333333','#c3e6cb','#dc3545','#6c757d'];
 
 
+var monedaDiv = $("#monedaDiv");
+var crecimientoDiv = $("#crecimientoDiv");
+var marcadorDiv =$("#marcadorDiv");
+var equipoDiv = $("#equipoDiv");
+var graficoDiv = $("#graficoDiv")
+
 $(document).ready(function (){
 
 
+    monedaDiv.load(monedaDiv.attr("src"));
+    crecimientoDiv.load(crecimientoDiv.attr("src"));
+    marcadorDiv.load(marcadorDiv.attr("src"));
+    equipoDiv.load(equipoDiv.attr("src"));
+    graficoDiv.load(graficoDiv.attr("src"));
 
     //loader Map Colombia
     $("#colombia").load("img/Colombia.svg");
-    $("#colombia1").load("img/Colombia.svg");
     var items = document.querySelectorAll('.circle-menu-box a.menu-item');
 
     for(var i = 0, l = items.length; i < l; i++) {
@@ -49,9 +59,42 @@ $(document).ready(function (){
         $(document).on('mousemove', function(e){
             $description.css({
                 left:  e.pageX-400,
-                top:   e.pageY - 150
+                top:   e.pageY - 150,
+                height : "60px"
             });
-            console.log($description);
+
+            $tableTooltip.css({
+                left:  e.pageX-1200,
+                top:   e.pageY - 150,
+                height : "60px"
+            });
+        });
+
+
+
+
+        $tableTooltip = $(".table-tooltip");
+
+        $(".ee a").hover(function (){
+           var id = $(this).attr("data-id");
+            $(this).find("b").css("color","#960303")
+           if(id == "moneda"){
+               $("svg.icons#moneda  > g path").css("fill","#960303");
+           }else{
+
+               $("svg.icons#"+id+">.st0").css("fill","#960303");
+           }
+            $("#"+id+".table-tooltip").attr("class", "cls-1 heyo");
+            $tableTooltip.addClass('active');
+            getHtmlTable(id,$tableTooltip)
+
+
+
+        },function() {
+            $(".ee a").find("b").css("color","#7a7979")
+            $("svg.icons#moneda  > g path").css("fill","#717171");
+            $("svg.icons > .st0").css("fill","#717171");
+            $tableTooltip.removeClass('active');
         });
 
 
@@ -62,6 +105,13 @@ $(document).ready(function (){
 
 
 
-
+function getHtmlTable(id, selector){
+    switch (id){
+        case "moneda":{
+            selector.html($("#table-table-tooltip").html());
+            break;
+        }
+    }
+}
 
 });
