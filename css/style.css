@@ -260,3 +260,7 @@ svg {
   border-right: 25px solid transparent;
   border-top: 25px solid #32383e;
 }
+
+div.verticalLine {
+  border-left: thick solid  #960303;
+}
