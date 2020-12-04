@@ -64,8 +64,9 @@ $(document).ready(function (){
         $("path.cls-1").click(function(){
             var url = $(this).attr("url");
             $("#colombia").css("width","90%");
-            console.log("img/departamentos/"+$(this).attr("url"));
-            $("#colombia").load("img/departamentos/"+$(this).attr("url")+".svg");
+            //console.log("img/departamentos/"+$(this).attr("url"));
+            window.location.href = "departamento.html?name="+$(this).attr("url")+"&id="+$(this).attr("id")
+            //$("#colombia").load("img/departamentos/"+$(this).attr("url")+".svg");
         });
 
 
