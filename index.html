@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FNC</title>
+</head>
+<body>
+
+
+
+<article class="map">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="circlemap" style="height:250vh; width:80vw"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="circlemap1" style="height:400vh; width:300vw"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="card">
+                    <div class="card-body">
+                        <div id='colombia' style="width: 100%"></div>
+                        <div class="description"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="et">
+                            <div id="e1" class="ee">
+                               <div style="position: relative; bottom: -5px; right: 20px">
+                                   <div style="width: 103px;position: relative;right: 10px;">
+                                       <b>$264.954<br>Inversión MM</b>
+                                   </div>
+                                   <img class="c1" src="img/iconos/monedas.svg">
+                               </div>
+
+                            </div>
+                            <div class="ec">
+                                <div id="e2" class="ee">
+                                    <div style="position: relative; bottom: 40px; left: 10px">
+                                        <div style="width: 105px;position: relative;left: -110px;top: 51px">
+                                            <b>735.399<br>#Beneficarios</b>
+                                        </div>
+                                        <img class="c5" src="img/iconos/trabajo-en-equipo.svg" >
+                                    </div>
+
+                                </div>
+                                <div id="e3" class="ee">
+                                    <div style="position: relative; bottom: 45px; left: -26px">
+                                        <div style="width: 120px;position: relative;left: 54px;top: 51px">
+                                            <b>18<br>Dependencias</b>
+                                        </div>
+                                        <img class="c2" src="img/iconos/marcador-de-posicion.svg">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="ec">
+                                <div id="e4" class="ee">
+                                    <div style="position: relative; bottom: 44px; left: -10px">
+                                        <div style="width: 200px;position: relative;left: -122px;top: 92px">
+                                            <b>1.314<br># Proyectos Ejecutados</b>
+                                        </div>
+                                        <img class="c4" src="img/iconos/grafico-de-lineas.svg">
+                                    </div>
+
+                                </div>
+                                <div id="e5" class="ee">
+                                    <div style="position: relative; bottom: 44px; left: -6px">
+                                        <div style="width: 200px;position: relative;left: -32px;top: 92px">
+                                            <b>3,67<br> Apalancamiento</b>
+                                        </div>
+                                        <img  class="c3" src="img/iconos/crecimiento.svg">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card shadow noticia">
+                    <div class="card-body" style="position: relative;top: -30px;">
+                        <h2><b><span class="linea-card">|</span><span class="text-noticia">Noticias</span></b></h2>
+                        <p style="font-size: 12px">
+                            La FNC ha consolidado y fortalecido su capadidad de
+                            gestión de proyectos, dotándola de la herramientas que le
+                            permiten una organización y planeación más eficiente de los
+                            mismos. Cada proyecto gestionado dentro de la institucionalidad
+                            cafetea esta alinenado con los objetivos de la estrategia
+                            de valor de la Federación y por lo tanto con los intereses de los
+                            caficultores de Colombia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script src="js/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
+<!-- DevExtreme themes -->
+<link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/20.2.4/css/dx.common.css">
+<link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/20.2.4/css/dx.light.css">
+
+<!-- DevExtreme library -->
+<script type="text/javascript" src="https://cdn3.devexpress.com/jslib/20.2.4/js/dx.all.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+<script src="js/donut-chart.js"></script>
+
+<script src="js/index.js"></script>
+<script src="js/chart.js"></script>
+
+</body>
+</html>

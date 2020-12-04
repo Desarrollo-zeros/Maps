@@ -1,0 +1,218 @@
+
+
+p{
+  font-family: Avenir Book, monospace !important;
+
+}
+
+
+@font-face {
+  font-family: "Avenir Black";
+  src: url(fonts/Avenir-Black.ttf);
+}
+@font-face {
+  font-family: "Avenir BlackOblique";
+  src: url(fonts/Avenir-BlackOblique.ttf);
+}
+@font-face {
+  font-family: "Avenir Book";
+  src: url(fonts/Avenir-Book.ttf);
+}
+@font-face {
+  font-family: "Avenir Heavy";
+  src: url(fonts/Avenir-Heavy.ttf);
+}
+@font-face {
+  font-family: "Avenir HeavyOblique";
+  src: url(fonts/Avenir-HeavyOblique.ttf);
+}
+@font-face {
+  font-family: "Avenir Light";
+  src: url(fonts/Avenir-Light.ttf);
+}
+@font-face {
+  font-family: "Avenir LightOblique";
+  src: url(fonts/Avenir-LightOblique.ttf);
+}
+@font-face {
+  font-family: "Avenir Medium";
+  src: url(fonts/Avenir-Medium.ttf);
+}
+@font-face {
+  font-family: "Avenir Oblique";
+  src: url(fonts/Avenir-Oblique.ttf);
+}
+@font-face {
+  font-family: "Avenir Oblique";
+  src: url(fonts/Avenir-Roman.ttf);
+}
+@font-face {
+  font-family: "Avenir MediumOblique";
+  src: url(fonts/Avenir-MediumOblique.ttf);
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+ 
+
+html, body {
+  width: 100%;
+}
+
+svg {
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+}
+
+.heyo:hover {
+  fill: #CC2929;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cls-1 {
+  fill: #21669E;
+  cursor: pointer;
+}
+
+.description {
+  pointer-events: none;
+  position: absolute;
+  font-size: 16px;
+  text-align: center;
+  background: rgb(252, 252, 252);
+  padding: 20px 20px;
+  z-index: 5;
+  height: 30px;
+  line-height: 20px;
+  margin: 0 auto;
+  color: #000000;
+  top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #eee;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: none;
+}
+.description.active {
+  display: block;
+}
+.description:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+}
+
+
+article.map{
+  padding: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#colombia{
+  width: 100%;
+}
+
+
+
+.card{
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.card.noticia{
+  background-color: #efefef;
+  background-clip: border-box;
+}
+
+.text-noticia {
+  position: relative;
+  bottom: 10px;
+  left: 20px;
+}
+
+.linea-card {
+  position: relative;
+  bottom: 15px;
+  color: #960303;
+  font-size: 50px;
+}
+
+
+#et {
+
+  width: 300px;
+  height: 350px;
+
+  background-size: contain;
+}
+
+.ee {
+  width: 60px;
+  height: 60px;
+  background: white;
+  text-align: center;
+
+}
+.ec {
+
+  margin-top: 55px;
+  display: flow-root;
+}
+#e1 {
+
+  margin: auto;
+}
+
+#e2 {
+
+  float: left;
+  margin-left: -15px;
+}
+
+#e3 {
+
+  float: right;
+  margin-right: 3px;
+}
+
+#e4 {
+
+  float: left;
+  margin-left: 60px;
+}
+
+#e5 {
+
+  float: right;
+  margin-right: 60px;
+}
+
+.tooltip ul {
+  padding-left: 0;
+  list-style:none;
+}
+
+svg {
+  max-width:640px;
+  margin:0 auto;
+  display:block;
+}
