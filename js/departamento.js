@@ -5,6 +5,17 @@ var crecimientoDiv = $("#crecimientoDiv");
 var marcadorDiv =$("#marcadorDiv");
 var equipoDiv = $("#equipoDiv");
 var graficoDiv = $("#graficoDiv")
+function ocultar(){
+    
+    document.getElementById("indicadoresDiv").style.display="none";
+    document.getElementById("ProyectosDiv").style.display="block";
+}
+function ocultar1(){
+    
+    document.getElementById("indicadoresDiv").style.display="block";
+    document.getElementById("ProyectosDiv").style.display="none";
+}
+
 
 $(document).ready(function (){
 
@@ -17,7 +28,7 @@ $(document).ready(function (){
     graficoDiv.load(graficoDiv.attr("src"));
 
 
-
+    document.getElementById("ProyectosDiv").style.display="none";
 
 
     //loader Map Colombia
@@ -64,9 +75,8 @@ $(document).ready(function (){
         $("path.cls-1").click(function(){
             var url = $(this).attr("url");
             $("#colombia").css("width","90%");
-            //console.log("img/departamentos/"+$(this).attr("url"));
-            window.location.href = "departamento.html?name="+$(this).attr("url")+"&id="+$(this).attr("id")
-            //$("#colombia").load("img/departamentos/"+$(this).attr("url")+".svg");
+            console.log("img/departamentos/"+$(this).attr("url"));
+            $("#colombia").load("img/departamentos/"+$(this).attr("url")+".svg");
         });
 
 

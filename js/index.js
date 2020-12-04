@@ -5,7 +5,12 @@ var monedaDiv = $("#monedaDiv");
 var crecimientoDiv = $("#crecimientoDiv");
 var marcadorDiv =$("#marcadorDiv");
 var equipoDiv = $("#equipoDiv");
-var graficoDiv = $("#graficoDiv")
+var graficoDiv = $("#graficoDiv");
+function ocultar(){
+    document.getElementById("indicadoresDiv").style.display="none";
+    document.getElementById("ProyectosDiv").style.display="block";
+}
+
 
 $(document).ready(function (){
 
@@ -19,6 +24,8 @@ $(document).ready(function (){
     //loader Map Colombia
     $("#colombia").load("img/Colombia.svg");
     var items = document.querySelectorAll('.circle-menu-box a.menu-item');
+
+    
 
     for(var i = 0, l = items.length; i < l; i++) {
         items[i].style.left = (40 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
