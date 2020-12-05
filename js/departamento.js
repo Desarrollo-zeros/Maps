@@ -4,7 +4,13 @@ var monedaDiv = $("#monedaDiv");
 var crecimientoDiv = $("#crecimientoDiv");
 var marcadorDiv =$("#marcadorDiv");
 var equipoDiv = $("#equipoDiv");
-var graficoDiv = $("#graficoDiv")
+var graficoDiv = $("#graficoDiv");
+
+var afroId=$("#afroDiv");
+var hombresId=$("#hombreDiv");
+var mujeresId=$("#mujerDiv");
+var jovenId=$("#jovenDiv");
+
 function mostrarMunicipio(){
     
     document.getElementById("departamentoDiv").style.display="none";
@@ -13,6 +19,9 @@ function mostrarMunicipio(){
     $("#mapa1").load("img/departamentos/"+name+".svg");
     document.getElementById("municipioDiv").style.display="block";
     document.getElementById("municipioDiv2").style.display="block";
+    //document.getElementById("#municipioDiv3").style.display="block";
+    $("#departsv").find("svg").attr("viewBox","0 0 20 23");
+
 }
 function mostrarDepartamento(){
     document.getElementById("departamentoDiv1").style.display="block";
@@ -21,6 +30,7 @@ function mostrarDepartamento(){
     $("#mapa1").load("img/Colombia.svg");
     document.getElementById("municipioDiv").style.display="none";
     document.getElementById("municipioDiv2").style.display="none";
+    //document.getElementById("#municipioDiv3").style.display="none";
 }
 
 
@@ -34,14 +44,18 @@ $(document).ready(function (){
     equipoDiv.load(equipoDiv.attr("src"));
     graficoDiv.load(graficoDiv.attr("src"));
 
+    afroId.load(afroId.attr("src"));
+    hombresId.load(hombresId.attr("src"));
+    mujeresId.load(mujeresId.attr("src"));
+    jovenId.load(jovenId.attr("src"));
 
     document.getElementById("municipioDiv").style.display="none";
     document.getElementById("municipioDiv2").style.display="none";
-
+  //  document.getElementById("municipioDiv3").style.display="none";
     //loader Map Colombia
     $("#mapa1").load("img/Colombia.svg");
 
-
+    
 
     //$("Cesar").css("fill", "#e90000");
    
@@ -70,6 +84,7 @@ $(document).ready(function (){
         $("#"+idDpta).css("fill","#960303");
 
         $("#departsv").load("img/departamentos/"+name+".svg");
+        
         document.getElementById("departamentoSpan").innerHTML=name;
 
         $("path.cls-1").on("mouseover",function(){
@@ -114,8 +129,8 @@ $(document).ready(function (){
         });
 
 
-
-
+        
+        $("#municipioDiv3").find("svg").attr("viewBox","0 0 10 13");
         $tableTooltip = $(".table-tooltip");
 
         $(".ee a").hover(function (){

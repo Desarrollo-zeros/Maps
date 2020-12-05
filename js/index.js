@@ -85,6 +85,12 @@ $(document).ready(function (){
                 top:   e.pageY -275,
                 height : "60px"
             });
+
+            $tableTooltip2.css({
+                left:  e.pageX-1030,
+                top:   e.pageY -275,
+                height : "60px"
+            });
         });
 
 
@@ -113,9 +119,21 @@ $(document).ready(function (){
             $("svg.icons > .st0").css("fill","#717171");
             $tableTooltip.removeClass('active');
         });
+            
+        
+        //----------------------
 
-
-
+        $tabletip2 = $(".table-tooltip2");
+        
+        $(".bb a").hover(function (){
+           var id = $(this).attr("data-id");
+           
+            $("#"+id+".table-tooltip2").attr("class", "cls-1 heyo");
+            $tableTooltip2.addClass('active');
+            getHtmlTable(id,$tabletip2)
+        },function() {
+            $tableTooltip2.removeClass('active');
+        });
 
     },1000);
 
