@@ -1,19 +1,26 @@
 var colors = ['#007bff','#28a745','#333333','#c3e6cb','#dc3545','#6c757d'];
-
+var name;
 var monedaDiv = $("#monedaDiv");
 var crecimientoDiv = $("#crecimientoDiv");
 var marcadorDiv =$("#marcadorDiv");
 var equipoDiv = $("#equipoDiv");
 var graficoDiv = $("#graficoDiv")
-function ocultar(){
+function mostrarMunicipio(){
     
-    document.getElementById("indicadoresDiv").style.display="none";
-    document.getElementById("ProyectosDiv").style.display="block";
+    document.getElementById("departamentoDiv").style.display="none";
+    document.getElementById("departamentoDiv1").style.display="none";
+    document.getElementById("departamentoDiv2").style.display="none";
+    $("#mapa1").load("img/departamentos/"+name+".svg");
+    document.getElementById("municipioDiv").style.display="block";
+    document.getElementById("municipioDiv2").style.display="block";
 }
-function ocultar1(){
-    
-    document.getElementById("indicadoresDiv").style.display="block";
-    document.getElementById("ProyectosDiv").style.display="none";
+function mostrarDepartamento(){
+    document.getElementById("departamentoDiv1").style.display="block";
+    document.getElementById("departamentoDiv2").style.display="block";
+    document.getElementById("departamentoDiv").style.display="block";
+    $("#mapa1").load("img/Colombia.svg");
+    document.getElementById("municipioDiv").style.display="none";
+    document.getElementById("municipioDiv2").style.display="none";
 }
 
 
@@ -28,21 +35,21 @@ $(document).ready(function (){
     graficoDiv.load(graficoDiv.attr("src"));
 
 
-    document.getElementById("ProyectosDiv").style.display="none";
-
+    document.getElementById("municipioDiv").style.display="none";
+    document.getElementById("municipioDiv2").style.display="none";
 
     //loader Map Colombia
-    $("#colombia").load("img/Colombia.svg");
+    $("#mapa1").load("img/Colombia.svg");
 
 
 
-    $("Cesar").css("fill", "#e90000");
+    //$("Cesar").css("fill", "#e90000");
    
 
     //datos variables
     var anio="2019";
     document.getElementById("spanY").innerHTML = anio.toString();
-
+    
 
 
     var items = document.querySelectorAll('.circle-menu-box a.menu-item');
@@ -58,12 +65,12 @@ $(document).ready(function (){
 
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        var name = urlParams.get("name");
+        name = urlParams.get("name");
         var idDpta = urlParams.get("id");
         $("#"+idDpta).css("fill","#960303");
 
         $("#departsv").load("img/departamentos/"+name+".svg");
-
+        document.getElementById("departamentoSpan").innerHTML=name;
 
         $("path.cls-1").on("mouseover",function(){
             $("path.cls-1").css("fill", "#d2d2e6");
@@ -75,8 +82,10 @@ $(document).ready(function (){
         $("path.cls-1").click(function(){
             var url = $(this).attr("url");
             $("#colombia").css("width","90%");
-            console.log("img/departamentos/"+$(this).attr("url"));
-            $("#colombia").load("img/departamentos/"+$(this).attr("url")+".svg");
+            //console.log("img/departamentos/"+$(this).attr("url"));
+            //$("#colombia").load("img/departamentos/"+$(this).attr("url")+".svg");
+            window.location.href = "departamento.html?name="+$(this).attr("url")+"&id="+$(this).attr("id")
+            return;
         });
 
 

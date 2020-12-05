@@ -81,3 +81,35 @@ if (chDonut1) {
         options: donutOptions
     });
 }
+
+
+var donutOptions3 = {
+    cutoutPercentage: 85,
+    legend: {
+        display: false,
+        position:'bottom',
+        labels:{
+            pointStyle:'circle',
+            usePointStyle:true,
+            fontColor: '#ffffff',
+        }
+    }
+};
+var chDonutData3 = {
+    labels: ['Sociales', 'Economicos'],
+    datasets: [
+        {
+            backgroundColor: colors.slice(0,2),
+            borderWidth: 0,
+            data: [74, 11]
+        }
+    ]
+};
+var chDonut3 = document.getElementById("circlemap3").getContext('2d');
+if (chDonut3) {
+    new Chart(chDonut3, {
+        type: 'pie',
+        data: chDonutData3,
+        options: donutOptions3
+    });
+}
