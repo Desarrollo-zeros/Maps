@@ -7,9 +7,9 @@ var marcadorDiv =$("#marcadorDiv");
 var equipoDiv = $("#equipoDiv");
 var graficoDiv = $("#graficoDiv");
 
+var afroId=$("#afroDiv");
 var hombresId=$("#hombreDiv");
 var mujeresId=$("#mujerDiv");
-var afroId=$("#afroDiv");
 var jovenId=$("#jovenDiv");
 
 $(document).ready(function (){
@@ -21,11 +21,10 @@ $(document).ready(function (){
     equipoDiv.load(equipoDiv.attr("src"));
     graficoDiv.load(graficoDiv.attr("src"));
 
-
-    hombresId.load(hombresId.attr("src"));
-    /*mujeresId.load(mujeresId.attr("src"));
     afroId.load(afroId.attr("src"));
-    jovenId.load(jovenId.attr("src"));*/
+    hombresId.load(hombresId.attr("src"));
+    mujeresId.load(mujeresId.attr("src"));
+    jovenId.load(jovenId.attr("src"));
 
 
     //loader Map Colombia
