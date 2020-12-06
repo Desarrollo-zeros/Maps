@@ -11,6 +11,7 @@ var afroId=$("#afroDiv");
 var hombresId=$("#hombreDiv");
 var mujeresId=$("#mujerDiv");
 var jovenId=$("#jovenDiv");
+$tableTooltip1 = null;
 
 $(document).ready(function (){
 
@@ -45,6 +46,7 @@ $(document).ready(function (){
 
     setTimeout(function(){
 
+        $("path").attr("filter","url(#dropShadow)")
 
         $("path.cls-1").on("mouseover",function(){
             $("path.cls-1").css("fill", "#d2d2e6");
@@ -65,12 +67,14 @@ $(document).ready(function (){
 
         $description = $(".description");
 
+
         $('path.cls-1').hover(function() {
             $(this).attr("class", "cls-1 heyo");
             $description.addClass('active');
             $description.html($(this).attr('title'));
         }, function() {
             $description.removeClass('active');
+
         });
 
         $(document).on('mousemove', function(e){
@@ -86,17 +90,18 @@ $(document).ready(function (){
                 height : "60px"
             });
 
-            $tableTooltip2.css({
-                left:  e.pageX-1030,
-                top:   e.pageY -275,
-                height : "60px"
-            });
+
+
+
+
+
         });
 
 
 
 
         $tableTooltip = $(".table-tooltip");
+
 
         $(".ee a").hover(function (){
            var id = $(this).attr("data-id");
@@ -123,19 +128,9 @@ $(document).ready(function (){
         
         //----------------------
 
-        $tabletip2 = $(".table-tooltip2");
-        
-        $(".bb a").hover(function (){
-           var id = $(this).attr("data-id");
-           
-            $("#"+id+".table-tooltip2").attr("class", "cls-1 heyo");
-            $tableTooltip2.addClass('active');
-            getHtmlTable(id,$tabletip2)
-        },function() {
-            $tableTooltip2.removeClass('active');
-        });
 
     },1000);
+
 
 
 

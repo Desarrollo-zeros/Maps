@@ -24,8 +24,23 @@
                         <div class="card-body" style="position: relative;top: -30px;">
                             <br>
                             <div style="border-left: thick solid  #960303;">
-                                <h2><b><span class="text-noticia">Mapa de Sostenibilidad</span></b></h2>
-                                <h2  style="position:relative; font-size: 12px; left: 20px;"><span>Comité de cafeteros de  </span><span class="bold" id="departamentoSpan"></span> <span id="spanY" >2019</span> </h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h2><b><span class="text-noticia">Mapa de Sostenibilidad</span></b></h2>
+                                        <h2  style="position:relative; font-size: 12px; left: 20px;"><span>Comité de cafeteros de  </span><span class="bold" id="departamentoSpan"></span> <span id="spanY" >2019</span> </h2>
+                                    </div>
+                                    <div class="col-md-2 text-noticia">
+                                        <label>Año de información</label>
+                                        <select class="form-control" id="selectAnoCargue">
+                                            <option>2017</option>
+                                            <option>2018</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
                                 <span>__________________________________________________________________________________________________</span>
                             </div>
                         </div>
@@ -41,7 +56,7 @@
                             <div class="col-sm-8">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div id='mapa1' style="width: 100%"></div>
+                                        <div id='mapa1' style="width: 160%"></div>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +82,7 @@
                              <div class="col-sm-12">
                                 <div class="card">
                                     <div class="card-body ">
-                                        <div id='departsv' style="width: 70%;height: 70%;" onclick="mostrarMunicipio()"></div>
+                                        <div id='departsv' style="width: 170%;height: 70%;" onclick="mostrarMunicipio()"></div>
                                     </div>
                                 </div>
                             </div>
@@ -80,6 +95,14 @@
                             <!-- circle chart 2  -->
                             <div class="card">
                                 <div class="card-body" id="departamentoDiv2">
+                                    <div id="circlemap1-tooltip" class="table-tooltip1">
+                                        <div>
+                                            <button onclick="$('#circlemap1-tooltip').removeClass('active')" style="color: #ffffff" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <table></table>
+                                        </div>
+                                    </div>
                                     <canvas id="circlemap1" style="height:400vh; width:300vw"></canvas>
                                 </div>
                             </div> 

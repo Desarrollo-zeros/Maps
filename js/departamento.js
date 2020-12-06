@@ -19,8 +19,13 @@ function mostrarMunicipio(){
     $("#mapa1").load("img/departamentos/"+name+".svg");
     document.getElementById("municipioDiv").style.display="block";
     document.getElementById("municipioDiv2").style.display="block";
-    //document.getElementById("#municipioDiv3").style.display="block";
+    document.getElementById("#municipioDiv3").style.display="block";
     $("#departsv").find("svg").attr("viewBox","0 0 20 23");
+
+    setTimeout(function (){
+        $("path").attr("filter","url(#dropShadow1)");
+        $("#mapa1").css("width","170%");
+    },1000)
 
 }
 function mostrarDepartamento(){
@@ -31,6 +36,7 @@ function mostrarDepartamento(){
     document.getElementById("municipioDiv").style.display="none";
     document.getElementById("municipioDiv2").style.display="none";
     //document.getElementById("#municipioDiv3").style.display="none";
+    $("#mapa1").css("width","160%");
 }
 
 
@@ -161,6 +167,10 @@ $(document).ready(function (){
         }
     },1000)
 
+
+    setTimeout(function (){
+        $("path").attr("filter","url(#dropShadow)")
+    },2000)
 
 });
 
