@@ -326,13 +326,13 @@ div.verticalLine {
   border-left: thick solid  #960303;
 }
 
-
 .uno {
   width: 100% !important;
   height: 275px!important;
   overflow: auto!important;
   direction: rtl!important;
 }
+
 .uno div {
  
   width: auto !important;
@@ -340,12 +340,9 @@ div.verticalLine {
   direction: ltr !important;
   
   padding: .5rem !important;
-   ;
 }
 .scroller {
   overflow-y: scroll !important;
- 
-  
 }
 
 .table-tooltip2 {
