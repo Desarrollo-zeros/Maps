@@ -232,6 +232,9 @@ svg {
 }
 
 
+
+
+
 .table-tooltip {
   pointer-events: none;
   position: absolute;
@@ -327,8 +330,8 @@ div.verticalLine {
 }
 
 .uno {
-  width: 100% !important;
-  height: 275px!important;
+  
+  height: 200px!important;
   overflow: auto!important;
   direction: rtl!important;
 }
@@ -336,7 +339,7 @@ div.verticalLine {
 .uno div {
  
   width: auto !important;
-  height: 500% !important;
+  height: 300% !important;
   direction: ltr !important;
   
   padding: .5rem !important;
@@ -381,4 +384,17 @@ div.verticalLine {
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   border-top: 25px solid #32383e;
+}
+
+.municic{
+
+}
+.depav{
+
+}
+.menuFloating{
+  text-decoration: none;
+  color: #7a7979;
+  font-size: 1rem;
+  font-weight: bold;
 }
