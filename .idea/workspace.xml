@@ -49,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="E:/Desarrollo/EvoDeploy" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -85,6 +85,8 @@
       <workItem from="1607043159262" duration="83000" />
       <workItem from="1607043294526" duration="25116000" />
       <workItem from="1607100603011" duration="14054000" />
+      <workItem from="1607224921041" duration="621000" />
+      <workItem from="1607345633631" duration="215000" />
     </task>
     <servers />
   </component>
@@ -101,6 +103,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="42" key="#Inspections" timestamp="1607042917972">
@@ -119,10 +122,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="437" y="233" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607043124668" />
-    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1607043309393">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="542" y="124" key="FileChooserDialogImpl" timestamp="1607345848441">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607043309393" />
+    <state x="542" y="124" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1607345848441" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1607042868701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
