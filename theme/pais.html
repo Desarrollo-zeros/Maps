@@ -29,6 +29,9 @@
                             <br>
                             <div class="verticalLine">
                                 <div class="row">
+                                    <div class="col-md-6">
+                                        <h2><b><span class="text-noticia">Mapa de Sostenibilidad</span></b></h2>
+                                    </div>
                                     <div class="col-md-2 text-noticia">
                                         <label>Año de información</label>
                                         <select class="form-control" id="selectAnoCargue">
@@ -38,9 +41,8 @@
                                             <option>2020</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-12">
-                                        <h2><b><span class="text-noticia" id="changeTitle">MAPA DE SOSTENIBILIDAD </span><span id="separadorCiudad" style="display: none;color: #960303;font-size: 50px; ">&nbsp;&nbsp;{&nbsp;&nbsp;<span style="font-size: 35px;" id="nameCiudad"></span></span></b></h2>
-                                    </div>
+
+
                                 </div>
                                 <br>
                                 <span>______________________________________________________________________________________</span>
@@ -53,6 +55,7 @@
 
 
             <div class="row">
+
 
                 <div class="col-sm-3 grafic1">
                     <div class="card">
@@ -77,7 +80,6 @@
 
 
 
-
                 <div class="col-sm-5 pais-view">
                     <div class="card">
                         <div class="card-body">
@@ -91,13 +93,15 @@
                 <div class="col-sm-5 depav-view" style="display: none">
                     <div class="card">
                         <div class="card-body">
-                            <div data-scale="0" id='depav' style="width: 100%; position: relative"></div>
+                            <div id='depav' style="width: 100%"></div>
                             <div class="description"></div>
                         </div>
                     </div>
+
+
+
+
                 </div>
-
-
 
 
 
@@ -238,7 +242,7 @@
                     <div class="card shadow noticia" >
                         <div class="card-body" style="position: relative;top: -30px">
                             <h2><b><span class="linea-card">|</span><span class="text-noticia">Noticias</span></b></h2>
-                            <div class="">
+                            <div class="uno">
                                 <div class="scroller">
                                     <p style="font-size: 12px" >
                                         La FNC ha consolidado y fortalecido su capadidad de
@@ -261,24 +265,6 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="grafic2" class="grafic2" style="position: relative; bottom: 250px; display: none">
-                    <div class="row" style="max-width: 800px">
-                        <div id="divCirclemap3" class="col-md-6">
-                            <canvas id="circlemap3"  width="1000" height="1000" ></canvas>
-                        </div>
-                        <div id="divCirclemap4" class="col-md-6">
-                            <div id="circlemap1-tooltip1" class="table-tooltip1">
-                                <div>
-                                    <button onclick="$('#circlemap1-tooltip1').removeClass('active')" style="color: #ffffff" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <table></table>
-                                </div>
-                            </div>
-                            <canvas id="circlemap4" width="600" height="600" ></canvas>
                         </div>
                     </div>
                 </div>
@@ -306,8 +292,8 @@
 <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/20.2.4/js/dx.all.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
-<script src="js/Api.js"></script>
 <script src="js/donut-chart.js"></script>
+<script src="js/api.js"></script>
 <script src="js/index.js"></script>
 <script src="js/chart.js"></script>
 

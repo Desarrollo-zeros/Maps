@@ -232,6 +232,9 @@ svg {
 }
 
 
+
+
+
 .table-tooltip {
   pointer-events: none;
   position: absolute;
@@ -270,30 +273,79 @@ svg {
   border-top: 25px solid #32383e;
 }
 
+
+.table-tooltip1 {
+  position: absolute;
+  font-size: 16px;
+  text-align: center;
+  background: #32383e;
+  padding: 20px 20px;
+  z-index: 999!important;
+  height: auto!important;
+  width: 114%!important;
+  color: #ffffff;
+  top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #32383e;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: none;
+  left: 160%!important;
+  list-style: none;
+
+}
+.table-tooltip1.active {
+  display: block;
+}
+.table-tooltip1:after {
+  content: "";
+  position: absolute;
+  right: 100% !important;
+  top: 20% !important;
+  width: 35px!important;
+  height: 10px!important;
+  margin-left: -125px;
+  border-left: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-top: 25px solid #32383e;
+}
+
+.table-tooltip1:before {
+  content: "";
+  position: absolute;
+  right: 100% !important;
+  top: 20% !important;
+  width: 35px!important;
+  height: 10px!important;
+  margin-left: -125px;
+  border-left: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-top: 25px solid #32383e;
+}
+
 div.verticalLine {
   border-left: thick solid  #960303;
 }
 
-
 .uno {
-  width: 100% !important;
-  height: 275px!important;
+  
+  height: 200px!important;
   overflow: auto!important;
   direction: rtl!important;
 }
+
 .uno div {
  
   width: auto !important;
-  height: 500% !important;
+  height: 300% !important;
   direction: ltr !important;
   
   padding: .5rem !important;
-   ;
 }
 .scroller {
   overflow-y: scroll !important;
- 
-  
 }
 
 .table-tooltip2 {
@@ -333,3 +385,18 @@ div.verticalLine {
   border-right: 25px solid transparent;
   border-top: 25px solid #32383e;
 }
+
+.municic{
+
+}
+.depav{
+
+}
+.menuFloating{
+  text-decoration: none;
+  color: #7a7979;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+svg {width:100%;transform-origin:top left;}

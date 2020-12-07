@@ -15,17 +15,37 @@
 
 
 <article class="map">
-    <div class="container">
-        <div class="row" ondblclick="window.location.href='index.html' ">
+    <div class="container"  >
+        
+        
+        <div class="row" ondblclick="window.location.href='index.html' " style="position: relative;" >
+           <!---linea punteada-->
+            <hr style="border:1px dotted gray; width:400px !important;position: absolute !important;left:20px;top:300px" />
             <!--comienza columna principal 1-->
             <div class="col-sm-8">
+                
                 <div class="row">
                     <div >
                         <div class="card-body" style="position: relative;top: -30px;">
                             <br>
                             <div style="border-left: thick solid  #960303;">
-                                <h2><b><span class="text-noticia">Mapa de Sostenibilidad</span></b></h2>
-                                <h2  style="position:relative; font-size: 12px; left: 20px;"><span>Comité de cafeteros de  </span><span class="bold" id="departamentoSpan"></span> <span id="spanY" >2019</span> </h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h2><b><span class="text-noticia">Mapa de Sostenibilidad</span></b></h2>
+                                        <h2  style="position:relative; font-size: 12px; left: 20px;"><span>Comité de cafeteros de  </span><span class="bold" id="departamentoSpan"></span> <span id="spanY" >2019</span> </h2>
+                                    </div>
+                                    <div class="col-md-2 text-noticia">
+                                        <label>Año de información</label>
+                                        <select class="form-control" id="selectAnoCargue">
+                                            <option>2017</option>
+                                            <option>2018</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
                                 <span>__________________________________________________________________________________________________</span>
                             </div>
                         </div>
@@ -36,55 +56,57 @@
                     <div class="description"></div>
                     <div class="col-sm-5">
                         <!-- mapa colombia  -->
-                        <div class="row">
-                           
-                            <div class="col-sm-8">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div id='mapa1' style="width: 100%"></div>
-                                    </div>
+                        <div class="col-sm-10">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div id='mapa1' style="width: 160%"></div>
                                 </div>
                             </div>
-                            
-                        </div>
-                        <div class="row">
-                            <!-- cicle chart1  -->
-
-                            <div class="col-sm-12">
-                                <div class="card">
-                                    <div class="card-body" id="departamentoDiv">
-                                        <canvas id="circlemap" style="height:250vh; width:80vw"></canvas>
-                                    </div>
-                                </div>
-                            </div>   
-
                         </div>
                     </div>
-
+                    <!-- mapa region -->
                     <div class="col-sm-5">
-                        <!-- mapa region -->
-                        <div class="row">
-                             <div class="col-sm-12">
-                                <div class="card">
-                                    <div class="card-body ">
-                                        <div id='departsv' style="width: 70%;height: 70%;" onclick="mostrarMunicipio()"></div>
-                                    </div>
+                        <div class="col-sm-10">
+                            <div class="card">
+                                <div class="card-body ">
+                                    <div id='departsv' style="width: 170%;height: 80%;" onclick="mostrarMunicipio()"></div>
                                 </div>
                             </div>
+                        </div>                
+                    </div>
+                </div>
+
+                
+
+                
+                <div class="row">
+                    <!-- cicle chart1  -->
+
+                    <div class="col-sm-5">
+                        <div class="card">
+                            <div class="card-body" id="departamentoDiv">
+                                <canvas id="circlemap" style="height:250vh; width:80vw"></canvas>
+                            </div>
                         </div>
+                    </div>   
+                    <div class="col-sm-6">
+                        <!-- circle chart 2  -->
+                        <div class="row" style="height: 70px;">
 
-                        
-                        
-
-                        <div class="row">
-                            <!-- circle chart 2  -->
-                            <div class="card">
-                                <div class="card-body" id="departamentoDiv2">
-                                    <canvas id="circlemap1" style="height:400vh; width:300vw"></canvas>
+                        </div>
+                        <div class="card">
+                            <div class="card-body" id="departamentoDiv2">
+                                <div id="circlemap1-tooltip" class="table-tooltip1">
+                                    <div>
+                                        <button onclick="$('#circlemap1-tooltip').removeClass('active')" style="color: #ffffff" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <table></table>
+                                    </div>
                                 </div>
-                            </div> 
+                                <canvas id="circlemap1" style="height:400vh; width:300vw"></canvas>
+                            </div>
                         </div>
-
                     </div>
                 </div>
                 <div class=row>
@@ -132,7 +154,7 @@
                                 </div>
 
                                 <a data-id="moneda" href="javascript:void(0)">
-                                    <div style="position: relative; bottom: -5px; right: 20px">
+                                    <div style="position: relative; bottom: -5px; right: 20px" id="tipo11">
                                         <div style="width: 103px;position: relative;right: 10px;">
                                             <b>$264.954<br>Inversión MM</b>
                                         </div>
@@ -170,12 +192,12 @@
                                         </table>
                                     </div>
                                     <a data-id="equipo"  href="javascript:void(0)">
-                                        <div style="position: relative; bottom: 40px; left: 10px">
+                                        <div style="position: relative; bottom: 40px; left: 10px" >
                                             <div style="width: 105px;position: relative;left: -110px;top: 51px">
                                                 <b>735.399<br>#Beneficarios</b>
                                             </div>
                                             <div id="equipoDiv" class="c5" src="img/iconos/trabajo-en-equipo.svg" ></div>
-                                        </div>
+                                        </div>       
                                     </a>
                                 </div>
 
@@ -212,7 +234,7 @@
                                         </table>
                                     </div>
                                     <a data-id="grafico" href="javascript:void(0)">
-                                        <div style="position: relative; bottom: 44px; left: -10px">
+                                        <div style="position: relative; bottom: 44px; left: -10px" >
                                             <div style="width: 200px;position: relative;left: -122px;top: 92px">
                                                 <b>1.314<br># Proyectos Ejecutados</b>
                                             </div>
@@ -223,7 +245,7 @@
                                 <div id="e5" class="ee">
                                     <div id="crecimiento-table-tooltip" class="table-tooltip"></div>
                                     <a data-id="crecimiento" href="javascript:void(0)">
-                                        <div style="position: relative; bottom: 44px; left: -6px">
+                                        <div style="position: relative; bottom: 44px; left: -6px" >
                                             <div style="width: 200px;position: relative;left: -32px;top: 92px">
                                                 <b>3,67<br> Apalancamiento</b>
                                             </div>
@@ -241,30 +263,34 @@
                 <div class="card shadow noticia" >
                     <div class="card-body" style="position: relative;top: -30px;" id="departamentoDiv1">
                         <br>
-                        <div  style="border-left: thick solid  #960303;">
-                            <h2><b><span class="text-noticia">Indicadores</span></b></h2>
-                            <h3 style="font-size: 12px;left: 20px;"><span style="font-weight: bold;left: 20px;">1.137 </span> <span >Marquesinas Construidas</span> </h3>
-                            <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">3.295 </span> <span>Hectáreas Fertilizadas</span> </h3>
-                            <h3 style="font-size: 12px"><span style="font-weight: bold;left: 20px;">175   </span> <span>Beneficiaderos Mejorados</span> </h3>
-                            <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">231   </span> <span>STAR Construidos</span> </h3>
-                            <h3 style="font-size: 12px"><span style="font-weight: bold;left: 20px;">470   </span> <span>Vías Intervenidos</span></h3>
-                            <br>
-                            <input type="button" onclick="mostrarMunicipio()" value="Proyectos"></input>
-
+                        <div class="uno">
+                            <div class="scroller">
+                                <h2><b><span class="text-noticia">Indicadores</span></b></h2>
+                                <h3 style="font-size: 12px;left: 20px;"><span style="font-weight: bold;left: 20px;">1.137 </span> <span >Marquesinas Construidas</span> </h3>
+                                <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">3.295 </span> <span>Hectáreas Fertilizadas</span> </h3>
+                                <h3 style="font-size: 12px"><span style="font-weight: bold;left: 20px;">175   </span> <span>Beneficiaderos Mejorados</span> </h3>
+                                <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">231   </span> <span>STAR Construidos</span> </h3>
+                                <h3 style="font-size: 12px"><span style="font-weight: bold;left: 20px;">470   </span> <span>Vías Intervenidos</span></h3>
+                                <br>
+                            </div>        
                         </div>
+                        <input type="button" onclick="mostrarMunicipio()" value="Proyectos"></input>
                     </div>
                     <div class="card-body" style="position: relative;top: -30px;" id="municipioDiv">
                         <br>
-                        <div  style="border-left: thick solid  #960303;">
-                            <h2><b><span class="text-noticia">Proyectos</span></b></h2>
-                            <h3 style="font-size: 12px;left: 20px;"> <span >Prog. Renovación de cafetales ituango</span> </h3>
-                            <h3 style="font-size: 12px;left: 20px;"> <span >Prog Sostenib. de cafetales ituango</span> </h3>
-                            <h3 style="font-size: 12px;left: 20px;"> <span >Const. Vivienda varias veredas ituango</span> </h3>
-                            <h3 style="font-size: 12px;left: 20px;"> <span >Mantenimiento Caminos veredales ituango</span> </h3>
-                            <br>
-                            <input type="button" onclick="mostrarDepartamento()" value="Indicadores"></input>
-
+                        <div div class="uno " >
+                            <div class="scroller">
+                                <!--style="border-left: thick solid  #960303;"-->
+                                <h2><b><span class="text-noticia">Proyectos</span></b></h2>
+                                <h3 style="font-size: 12px;left: 20px;"> <span >Prog. Renovación de cafetales ituango</span> </h3>
+                                <h3 style="font-size: 12px;left: 20px;"> <span >Prog Sostenib. de cafetales ituango</span> </h3>
+                                <h3 style="font-size: 12px;left: 20px;"> <span >Const. Vivienda varias veredas ituango</span> </h3>
+                                <h3 style="font-size: 12px;left: 20px;"> <span >Mantenimiento Caminos veredales ituango</span> </h3>
+                                <br>
+                                <span>fin</span>
+                            </div>
                         </div>
+                        <input type="button" onclick="mostrarDepartamento()" value="Indicadores"></input>
                     </div>
                 </div>
             </div>
