@@ -133,8 +133,10 @@
 
             <div class="col-sm-4">
 
+                
                 <div  class="table-tooltip"></div>
-                <div class="card">
+                <!-- version de departamento-->
+                <div id="departamentoDiv3" class="card depav" style="display:none">
                     <div class="card-body">
                         <div id="et">
                             <div id="e1" class="ee"><!--starts-->
@@ -264,13 +266,101 @@
 
                     </div>
                 </div>
+                <div class="card">
+                    <div style="position:relative;top:100px">
+                        <!-- menu circular 1 prototipo-->
+                        <div id="departamentoDiv4" class="menuFloating">       
+                            
+                            <div style="position: absolute !important;left:130px !important;top:0px !important">
+                                <div style="top:10;left:50">Inversión MM</div>
+                                <div id="monedaDiv2" style="width: 60px;height: 60px" src="img/iconos/monedas.svg"></div>
+                            </div>
+    
+                            <div style="position:absolute !important;left:30px !important;top:120px !important">
+                                <div id="equipoDiv2" style="width: 60px;height: 60px;"  src="img/iconos/trabajo-en-equipo.svg"></div>
+                            </div>
+                            <div style="position:absolute !important;left:-80px !important;top:150px !important">
+                                #Beneficiarios
+                                <div style="position:relative !important;left:30px !important;top:-50px !important">
+                                    735.399
+                                </div>
+                            </div>
+                            
+                            <!--proyectos ejecutados graficoDiv2-->
+                            <div style="position:absolute !important;left:86px !important;top:240px !important"> 
+                                <svg id="graficoDiv2" style="width: 60px;height: 60px;" src="img/iconos/grafico-de-lineas.svg"></svg> 
+                            </div>
+                            <div style="position:absolute !important;left:-24px !important;top:310px !important">
+                                #Proyectos Ejecutados
+                                <div style="position:relative !important;left:60px !important;top:-50px !important">
+                                    1.314
+                                </div>
+                            </div>
+    
+                            <!-- dependencias marcadorDiv-->
+                            <div style="position:absolute !important;left:240px !important;top:120px !important">
+                                <div id="marcadorDiv2" style="width: 60px;height: 60px;" src="img/iconos/marcador-de-posicion.svg"></div>
+                                <div style="position:relative !important;left:90px !important;top:-50px !important">
+                                    18
+                                </div>
+                                <div style="position:relative !important;left: 60px!important;top:-60px !important">
+                                    Dependencias
+                                </div>
+                                
+                            </div>
+                        
+    
+                            <!-- crecimiento, apalancamiento-->
+                            <div style="position: absolute !important;left:220px !important;top:240px !important"> 
+                                <div id="crecimientoDiv2" style="width: 60px;height: 60px;" src="img/iconos/crecimiento.svg"></div>
+                                <div style="position:relative !important;left: 50px;top: -20px !important">
+                                    3,67
+                                </div>
+                                <div style="position:relative !important;left: 0px;top: -14px !important">
+                                    Apalancamiento
+                                </div> 
+                            </div>
+                           
+                            
+    
+                        </div>
+                
+                    
+                  
+                        <!-- version de municipio-->
+                        <div id="municipioDiv4" class="municic menuFloating">       
+                            <div style="position: absolute !important;left:130px !important;top:30px !important">
+                                <div id="graficoDiv3" style="width: 60px;height: 60px;" src="img/iconos/grafico-de-lineas.svg"></div> 
+                            </div>
+                            <div style="position: absolute !important;left:200px !important;top:50px !important;width:120px !important;">
+                                <span>Proyectos Ejecutados</span>
+                            </div>
+
+                            <div style="position: absolute !important;left:130px !important;top:130px !important">
+                                <div id="equipoDiv3" style="position: relative!;width: 60px;height: 60px;"  src="img/iconos/trabajo-en-equipo.svg"></div>
+                            </div>
+                            <div style="position: absolute !important;left:200px !important;top:160px !important;width:120px !important;">
+                                Beneficiarios
+                            </div>
+
+                            <div style="position: absolute !important;left:130px !important;top:230px !important">
+                                <div id="monedaDiv3" style="width: 60px;height: 60px;" src="img/iconos/monedas.svg"></div>
+                            </div>
+                            <div style="position: absolute !important;left:200px !important;top:260px !important;width:120px !important;">
+                                Inversion
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <!--aqui termina el circle menu-->
 
-                <div class="card shadow noticia" >
+                <div class="card shadow noticia" style="position: absolute !important;left:50px !important;top:500px !important" >
                     <div class="card-body" style="position: relative;top: -30px;" id="departamentoDiv1">
                         <br>
-                        <div class="uno">
-                            <div class="scroller">
+                        <div class="uno" style="width:250px">
+                            <div class="scroller" >
                                 <h2><b><span class="text-noticia">Indicadores</span></b></h2>
                                 <h3 style="font-size: 12px;left: 20px;"><span style="font-weight: bold;left: 20px;">1.137 </span> <span >Marquesinas Construidas</span> </h3>
                                 <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">3.295 </span> <span>Hectáreas Fertilizadas</span> </h3>
@@ -284,7 +374,7 @@
                     </div>
                     <div class="card-body" style="position: relative;top: -30px;" id="municipioDiv">
                         <br>
-                        <div div class="uno " >
+                        <div div class="uno " style="width:250px">
                             <div class="scroller">
                                 <!--style="border-left: thick solid  #960303;"-->
                                 <h2><b><span class="text-noticia">Proyectos</span></b></h2>
@@ -292,11 +382,6 @@
                                 <h3 style="font-size: 12px;left: 20px;"> <span >Prog Sostenib. de cafetales ituango</span> </h3>
                                 <h3 style="font-size: 12px;left: 20px;"> <span >Const. Vivienda varias veredas ituango</span> </h3>
                                 <h3 style="font-size: 12px;left: 20px;"> <span >Mantenimiento Caminos veredales ituango</span> </h3>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
                                 <br>
                                 <span>fin</span>
                             </div>
