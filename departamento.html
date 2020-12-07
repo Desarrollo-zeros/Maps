@@ -20,7 +20,7 @@
         
         <div class="row" ondblclick="window.location.href='index.html' " style="position: relative;" >
            <!---linea punteada-->
-            <hr style="border:1px dotted gray; width:500px !important;position: absolute !important;left:20px;top:300px" />
+            <hr style="border:1px dotted gray; width:400px !important;position: absolute !important;left:20px;top:300px" />
             <!--comienza columna principal 1-->
             <div class="col-sm-8">
                 
@@ -56,63 +56,57 @@
                     <div class="description"></div>
                     <div class="col-sm-5">
                         <!-- mapa colombia  -->
-                        <div class="row">
-                           
-                            <div class="col-sm-8">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div id='mapa1' style="width: 160%"></div>
-                                    </div>
+                        <div class="col-sm-10">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div id='mapa1' style="width: 160%"></div>
                                 </div>
                             </div>
-                            
-                        </div>
-                        <div class="row">
-                            <!-- cicle chart1  -->
-
-                            <div class="col-sm-12">
-                                <div class="card">
-                                    <div class="card-body" id="departamentoDiv">
-                                        <canvas id="circlemap" style="height:250vh; width:80vw"></canvas>
-                                    </div>
-                                </div>
-                            </div>   
-
                         </div>
                     </div>
-
+                    <!-- mapa region -->
                     <div class="col-sm-5">
-                        <!-- mapa region -->
-                        <div class="row">
-                             <div class="col-sm-11">
-                                <div class="card">
-                                    <div class="card-body ">
-                                        <div id='departsv' style="width: 170%;height: 70%;" onclick="mostrarMunicipio()"></div>
-                                    </div>
+                        <div class="col-sm-10">
+                            <div class="card">
+                                <div class="card-body ">
+                                    <div id='departsv' style="width: 170%;height: 80%;" onclick="mostrarMunicipio()"></div>
                                 </div>
                             </div>
+                        </div>                
+                    </div>
+                </div>
+
+                
+
+                
+                <div class="row">
+                    <!-- cicle chart1  -->
+
+                    <div class="col-sm-5">
+                        <div class="card">
+                            <div class="card-body" id="departamentoDiv">
+                                <canvas id="circlemap" style="height:250vh; width:80vw"></canvas>
+                            </div>
                         </div>
+                    </div>   
+                    <div class="col-sm-6">
+                        <!-- circle chart 2  -->
+                        <div class="row" style="height: 70px;">
 
-                        
-                        
-
-                        <div class="row">
-                            <!-- circle chart 2  -->
-                            <div class="card">
-                                <div class="card-body" id="departamentoDiv2">
-                                    <div id="circlemap1-tooltip" class="table-tooltip1">
-                                        <div>
-                                            <button onclick="$('#circlemap1-tooltip').removeClass('active')" style="color: #ffffff" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                            <table></table>
-                                        </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body" id="departamentoDiv2">
+                                <div id="circlemap1-tooltip" class="table-tooltip1">
+                                    <div>
+                                        <button onclick="$('#circlemap1-tooltip').removeClass('active')" style="color: #ffffff" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <table></table>
                                     </div>
-                                    <canvas id="circlemap1" style="height:400vh; width:300vw"></canvas>
                                 </div>
-                            </div> 
+                                <canvas id="circlemap1" style="height:400vh; width:300vw"></canvas>
+                            </div>
                         </div>
-
                     </div>
                 </div>
                 <div class=row>
@@ -133,10 +127,8 @@
 
             <div class="col-sm-4">
 
-                
                 <div  class="table-tooltip"></div>
-                <!-- version de departamento-->
-                <div id="departamentoDiv3" class="card depav" style="display:none">
+                <div class="card">
                     <div class="card-body">
                         <div id="et">
                             <div id="e1" class="ee"><!--starts-->
@@ -162,7 +154,7 @@
                                 </div>
 
                                 <a data-id="moneda" href="javascript:void(0)">
-                                    <div style="position: relative; bottom: -5px; right: 20px">
+                                    <div style="position: relative; bottom: -5px; right: 20px" id="tipo11">
                                         <div style="width: 103px;position: relative;right: 10px;">
                                             <b>$264.954<br>Inversión MM</b>
                                         </div>
@@ -200,12 +192,12 @@
                                         </table>
                                     </div>
                                     <a data-id="equipo"  href="javascript:void(0)">
-                                        <div style="position: relative; bottom: 40px; left: 10px">
+                                        <div style="position: relative; bottom: 40px; left: 10px" >
                                             <div style="width: 105px;position: relative;left: -110px;top: 51px">
                                                 <b>735.399<br>#Beneficarios</b>
                                             </div>
                                             <div id="equipoDiv" class="c5" src="img/iconos/trabajo-en-equipo.svg" ></div>
-                                        </div>
+                                        </div>       
                                     </a>
                                 </div>
 
@@ -242,7 +234,7 @@
                                         </table>
                                     </div>
                                     <a data-id="grafico" href="javascript:void(0)">
-                                        <div style="position: relative; bottom: 44px; left: -10px">
+                                        <div style="position: relative; bottom: 44px; left: -10px" >
                                             <div style="width: 200px;position: relative;left: -122px;top: 92px">
                                                 <b>1.314<br># Proyectos Ejecutados</b>
                                             </div>
@@ -253,7 +245,7 @@
                                 <div id="e5" class="ee">
                                     <div id="crecimiento-table-tooltip" class="table-tooltip"></div>
                                     <a data-id="crecimiento" href="javascript:void(0)">
-                                        <div style="position: relative; bottom: 44px; left: -6px">
+                                        <div style="position: relative; bottom: 44px; left: -6px" >
                                             <div style="width: 200px;position: relative;left: -32px;top: 92px">
                                                 <b>3,67<br> Apalancamiento</b>
                                             </div>
@@ -266,101 +258,13 @@
 
                     </div>
                 </div>
-                <div class="card">
-                    <div style="position:relative;top:100px">
-                        <!-- menu circular 1 prototipo-->
-                        <div id="departamentoDiv4" class="menuFloating">       
-                            
-                            <div style="position: absolute !important;left:130px !important;top:0px !important">
-                                <div style="top:10;left:50">Inversión MM</div>
-                                <div id="monedaDiv2" style="width: 60px;height: 60px" src="img/iconos/monedas.svg"></div>
-                            </div>
-    
-                            <div style="position:absolute !important;left:30px !important;top:120px !important">
-                                <div id="equipoDiv2" style="width: 60px;height: 60px;"  src="img/iconos/trabajo-en-equipo.svg"></div>
-                            </div>
-                            <div style="position:absolute !important;left:-80px !important;top:150px !important">
-                                #Beneficiarios
-                                <div style="position:relative !important;left:30px !important;top:-50px !important">
-                                    735.399
-                                </div>
-                            </div>
-                            
-                            <!--proyectos ejecutados graficoDiv2-->
-                            <div style="position:absolute !important;left:86px !important;top:240px !important"> 
-                                <svg id="graficoDiv2" style="width: 60px;height: 60px;" src="img/iconos/grafico-de-lineas.svg"></svg> 
-                            </div>
-                            <div style="position:absolute !important;left:-24px !important;top:310px !important">
-                                #Proyectos Ejecutados
-                                <div style="position:relative !important;left:60px !important;top:-50px !important">
-                                    1.314
-                                </div>
-                            </div>
-    
-                            <!-- dependencias marcadorDiv-->
-                            <div style="position:absolute !important;left:240px !important;top:120px !important">
-                                <div id="marcadorDiv2" style="width: 60px;height: 60px;" src="img/iconos/marcador-de-posicion.svg"></div>
-                                <div style="position:relative !important;left:90px !important;top:-50px !important">
-                                    18
-                                </div>
-                                <div style="position:relative !important;left: 60px!important;top:-60px !important">
-                                    Dependencias
-                                </div>
-                                
-                            </div>
-                        
-    
-                            <!-- crecimiento, apalancamiento-->
-                            <div style="position: absolute !important;left:220px !important;top:240px !important"> 
-                                <div id="crecimientoDiv2" style="width: 60px;height: 60px;" src="img/iconos/crecimiento.svg"></div>
-                                <div style="position:relative !important;left: 50px;top: -20px !important">
-                                    3,67
-                                </div>
-                                <div style="position:relative !important;left: 0px;top: -14px !important">
-                                    Apalancamiento
-                                </div> 
-                            </div>
-                           
-                            
-    
-                        </div>
-                
-                    
-                  
-                        <!-- version de municipio-->
-                        <div id="municipioDiv4" class="municic menuFloating">       
-                            <div style="position: absolute !important;left:130px !important;top:30px !important">
-                                <div id="graficoDiv3" style="width: 60px;height: 60px;" src="img/iconos/grafico-de-lineas.svg"></div> 
-                            </div>
-                            <div style="position: absolute !important;left:200px !important;top:50px !important;width:120px !important;">
-                                <span>Proyectos Ejecutados</span>
-                            </div>
-
-                            <div style="position: absolute !important;left:130px !important;top:130px !important">
-                                <div id="equipoDiv3" style="position: relative!;width: 60px;height: 60px;"  src="img/iconos/trabajo-en-equipo.svg"></div>
-                            </div>
-                            <div style="position: absolute !important;left:200px !important;top:160px !important;width:120px !important;">
-                                Beneficiarios
-                            </div>
-
-                            <div style="position: absolute !important;left:130px !important;top:230px !important">
-                                <div id="monedaDiv3" style="width: 60px;height: 60px;" src="img/iconos/monedas.svg"></div>
-                            </div>
-                            <div style="position: absolute !important;left:200px !important;top:260px !important;width:120px !important;">
-                                Inversion
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
                 <!--aqui termina el circle menu-->
 
-                <div class="card shadow noticia" style="position: absolute !important;left:50px !important;top:500px !important" >
+                <div class="card shadow noticia" >
                     <div class="card-body" style="position: relative;top: -30px;" id="departamentoDiv1">
                         <br>
-                        <div class="uno" style="width:250px">
-                            <div class="scroller" >
+                        <div class="uno">
+                            <div class="scroller">
                                 <h2><b><span class="text-noticia">Indicadores</span></b></h2>
                                 <h3 style="font-size: 12px;left: 20px;"><span style="font-weight: bold;left: 20px;">1.137 </span> <span >Marquesinas Construidas</span> </h3>
                                 <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">3.295 </span> <span>Hectáreas Fertilizadas</span> </h3>
@@ -374,7 +278,7 @@
                     </div>
                     <div class="card-body" style="position: relative;top: -30px;" id="municipioDiv">
                         <br>
-                        <div div class="uno " style="width:250px">
+                        <div div class="uno " >
                             <div class="scroller">
                                 <!--style="border-left: thick solid  #960303;"-->
                                 <h2><b><span class="text-noticia">Proyectos</span></b></h2>

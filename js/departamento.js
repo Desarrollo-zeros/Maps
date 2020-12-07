@@ -1,49 +1,72 @@
 var colors = ['#007bff','#28a745','#333333','#c3e6cb','#dc3545','#6c757d'];
 var name;
-var monedaDiv = $("#monedaDiv");var monedaDiv2 = $("#monedaDiv2");var monedaDiv3 = $("#monedaDiv3");
-var crecimientoDiv = $("#crecimientoDiv");var crecimientoDiv2 = $("#crecimientoDiv2");
-var marcadorDiv =$("#marcadorDiv");var marcadorDiv2 =$("#marcadorDiv2");
-var equipoDiv = $("#equipoDiv");var equipoDiv2 = $("#equipoDiv2");var equipoDiv3 = $("#equipoDiv3");
-var graficoDiv = $("#graficoDiv");var graficoDiv2 = $("#graficoDiv2");var graficoDiv3 = $("#graficoDiv3");
-
+var monedaDiv = $("#monedaDiv");
+var crecimientoDiv = $("#crecimientoDiv");
+var marcadorDiv =$("#marcadorDiv");
+var equipoDiv = $("#equipoDiv");
+var graficoDiv = $("#graficoDiv");
 
 var afroId=$("#afroDiv");
 var hombresId=$("#hombreDiv");
 var mujeresId=$("#mujerDiv");
 var jovenId=$("#jovenDiv");
 
+function reposicionar(){//no funcionó
+    //$("#e1").find("a").find("div").attr("style","bottom:-250;right:20");
+    //$("#e2").find("a").find("div").attr("style","bottom:-200;right:20");
+    //document.getElementById("e1").style.right="250px";
+    //document.getElementById("e1").style.bottom="250px";
+}
+function reemplazo(){
+    //no funcionó
+    document.getElementById("tipo11").style.display="none";
+    document.getElementById("tipo12").style.display="none";
+    document.getElementById("tipo13").style.display="none";
+    document.getElementById("tipo14").style.display="none";
+    document.getElementById("tipo15").style.display="none";
+    document.getElementById("tipo21").style.display="block";
+    document.getElementById("tipo22").style.display="block";
+    document.getElementById("tipo23").style.display="block";
+}
+function reemplazo2(){
+    //no funcionó
+    document.getElementById("tipo11").style.display="block";
+    document.getElementById("tipo12").style.display="block";
+    document.getElementById("tipo13").style.display="block";
+    document.getElementById("tipo14").style.display="block";
+    document.getElementById("tipo15").style.display="block";
+    document.getElementById("tipo21").style.display="none";
+    document.getElementById("tipo22").style.display="none";
+    document.getElementById("tipo23").style.display="none";
+}
+
+
 function mostrarMunicipio(){
-    
+    //reposicionar();no se usa
+    //reemplazo(); no se usa
     document.getElementById("departamentoDiv").style.display="none";
     document.getElementById("departamentoDiv1").style.display="none";
     document.getElementById("departamentoDiv2").style.display="none";
-    document.getElementById("departamentoDiv3").style.display="none !important";
-    document.getElementById("departamentoDiv4").style.display="none";//reservado para menu circulo 1
     $("#mapa1").load("img/departamentos/"+name+".svg");
     document.getElementById("municipioDiv").style.display="block";
     document.getElementById("municipioDiv2").style.display="block";
-    //document.getElementById("municipioDiv3").style.display="block";
-    document.getElementById("municipioDiv4").style.display="block";
-    //$("#departsv").find("svg").attr("viewBox","0 0 20 23");
 
-    
+    $("#departsv").find("svg").attr("viewBox","0 0 30 33");
 
     setTimeout(function (){
-        //$("path").attr("filter","url(#dropShadow1)");
+        $("path").attr("filter","url(#dropShadow1)");
         $("#mapa1").css("width","170%");
     },1000)
 
 }
 function mostrarDepartamento(){
+    //reemplazo2();no se usa ya
     document.getElementById("departamentoDiv1").style.display="block";
     document.getElementById("departamentoDiv2").style.display="block";
     document.getElementById("departamentoDiv").style.display="block";
-    document.getElementById("departamentoDiv4").style.display="block";
     $("#mapa1").load("img/Colombia.svg");
     document.getElementById("municipioDiv").style.display="none";
     document.getElementById("municipioDiv2").style.display="none";
-    document.getElementById("municipioDiv4").style.display="none";
-    //document.getElementById("#municipioDiv3").style.display="none";
     $("#mapa1").css("width","160%");
 }
 
@@ -52,21 +75,22 @@ $(document).ready(function (){
 
 
 
-    monedaDiv.load(monedaDiv.attr("src"));monedaDiv2.load(monedaDiv2.attr("src"));monedaDiv3.load(monedaDiv3.attr("src"));
-    crecimientoDiv.load(crecimientoDiv.attr("src"));crecimientoDiv2.load(crecimientoDiv2.attr("src"));
-    marcadorDiv.load(marcadorDiv.attr("src"));marcadorDiv2.load(marcadorDiv2.attr("src"));
-    equipoDiv.load(equipoDiv.attr("src"));equipoDiv2.load(equipoDiv2.attr("src"));equipoDiv3.load(equipoDiv3.attr("src"));
-    graficoDiv.load(graficoDiv.attr("src"));graficoDiv2.load(graficoDiv2.attr("src"));graficoDiv3.load(graficoDiv3.attr("src"));
+    monedaDiv.load(monedaDiv.attr("src"));
+    crecimientoDiv.load(crecimientoDiv.attr("src"));
+    marcadorDiv.load(marcadorDiv.attr("src"));
+    equipoDiv.load(equipoDiv.attr("src"));
+    graficoDiv.load(graficoDiv.attr("src"));
 
     afroId.load(afroId.attr("src"));
     hombresId.load(hombresId.attr("src"));
     mujeresId.load(mujeresId.attr("src"));
     jovenId.load(jovenId.attr("src"));
 
+
+
     document.getElementById("municipioDiv").style.display="none";
     document.getElementById("municipioDiv2").style.display="none";
-    document.getElementById("municipioDiv4").style.display="none";
-    //document.getElementById("municipioDiv3").style.display="none";
+  //  document.getElementById("municipioDiv3").style.display="none";
     //loader Map Colombia
     $("#mapa1").load("img/Colombia.svg");
 
@@ -182,4 +206,3 @@ $(document).ready(function (){
     },2000)
 
 });
-
