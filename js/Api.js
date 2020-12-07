@@ -1,7 +1,7 @@
 class Api{
 
     constructor() {
-        this.url = "http://127.0.0.1:8000/api/";
+        this.url = "http://derco.ingenioitc.com/api/";
         this.response = null;
 
         this.dataVectores= {};
