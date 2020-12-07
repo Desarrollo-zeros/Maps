@@ -15,10 +15,15 @@
 
 
 <article class="map">
-    <div class="container">
-        <div class="row" ondblclick="window.location.href='index.html' ">
+    <div class="container"  >
+        
+        
+        <div class="row" ondblclick="window.location.href='index.html' " style="position: relative;" >
+           <!---linea punteada-->
+            <hr style="border:1px dotted gray; width:500px !important;position: absolute !important;left:20px;top:300px" />
             <!--comienza columna principal 1-->
             <div class="col-sm-8">
+                
                 <div class="row">
                     <div >
                         <div class="card-body" style="position: relative;top: -30px;">
@@ -79,7 +84,7 @@
                     <div class="col-sm-5">
                         <!-- mapa region -->
                         <div class="row">
-                             <div class="col-sm-12">
+                             <div class="col-sm-11">
                                 <div class="card">
                                     <div class="card-body ">
                                         <div id='departsv' style="width: 170%;height: 70%;" onclick="mostrarMunicipio()"></div>
@@ -264,30 +269,39 @@
                 <div class="card shadow noticia" >
                     <div class="card-body" style="position: relative;top: -30px;" id="departamentoDiv1">
                         <br>
-                        <div  style="border-left: thick solid  #960303;">
-                            <h2><b><span class="text-noticia">Indicadores</span></b></h2>
-                            <h3 style="font-size: 12px;left: 20px;"><span style="font-weight: bold;left: 20px;">1.137 </span> <span >Marquesinas Construidas</span> </h3>
-                            <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">3.295 </span> <span>Hectáreas Fertilizadas</span> </h3>
-                            <h3 style="font-size: 12px"><span style="font-weight: bold;left: 20px;">175   </span> <span>Beneficiaderos Mejorados</span> </h3>
-                            <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">231   </span> <span>STAR Construidos</span> </h3>
-                            <h3 style="font-size: 12px"><span style="font-weight: bold;left: 20px;">470   </span> <span>Vías Intervenidos</span></h3>
-                            <br>
-                            <input type="button" onclick="mostrarMunicipio()" value="Proyectos"></input>
-
+                        <div class="uno">
+                            <div class="scroller">
+                                <h2><b><span class="text-noticia">Indicadores</span></b></h2>
+                                <h3 style="font-size: 12px;left: 20px;"><span style="font-weight: bold;left: 20px;">1.137 </span> <span >Marquesinas Construidas</span> </h3>
+                                <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">3.295 </span> <span>Hectáreas Fertilizadas</span> </h3>
+                                <h3 style="font-size: 12px"><span style="font-weight: bold;left: 20px;">175   </span> <span>Beneficiaderos Mejorados</span> </h3>
+                                <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">231   </span> <span>STAR Construidos</span> </h3>
+                                <h3 style="font-size: 12px"><span style="font-weight: bold;left: 20px;">470   </span> <span>Vías Intervenidos</span></h3>
+                                <br>
+                            </div>        
                         </div>
+                        <input type="button" onclick="mostrarMunicipio()" value="Proyectos"></input>
                     </div>
                     <div class="card-body" style="position: relative;top: -30px;" id="municipioDiv">
                         <br>
-                        <div  style="border-left: thick solid  #960303;">
-                            <h2><b><span class="text-noticia">Proyectos</span></b></h2>
-                            <h3 style="font-size: 12px;left: 20px;"> <span >Prog. Renovación de cafetales ituango</span> </h3>
-                            <h3 style="font-size: 12px;left: 20px;"> <span >Prog Sostenib. de cafetales ituango</span> </h3>
-                            <h3 style="font-size: 12px;left: 20px;"> <span >Const. Vivienda varias veredas ituango</span> </h3>
-                            <h3 style="font-size: 12px;left: 20px;"> <span >Mantenimiento Caminos veredales ituango</span> </h3>
-                            <br>
-                            <input type="button" onclick="mostrarDepartamento()" value="Indicadores"></input>
-
+                        <div div class="uno " >
+                            <div class="scroller">
+                                <!--style="border-left: thick solid  #960303;"-->
+                                <h2><b><span class="text-noticia">Proyectos</span></b></h2>
+                                <h3 style="font-size: 12px;left: 20px;"> <span >Prog. Renovación de cafetales ituango</span> </h3>
+                                <h3 style="font-size: 12px;left: 20px;"> <span >Prog Sostenib. de cafetales ituango</span> </h3>
+                                <h3 style="font-size: 12px;left: 20px;"> <span >Const. Vivienda varias veredas ituango</span> </h3>
+                                <h3 style="font-size: 12px;left: 20px;"> <span >Mantenimiento Caminos veredales ituango</span> </h3>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <span>fin</span>
+                            </div>
                         </div>
+                        <input type="button" onclick="mostrarDepartamento()" value="Indicadores"></input>
                     </div>
                 </div>
             </div>
