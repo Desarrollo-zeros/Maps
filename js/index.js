@@ -105,6 +105,11 @@ $(document).ready(function (){
 
             $("#changeTitle").html(title+" "+dependencia.alias+" "+$("#selectAnoCargue").val());
 
+            $("#sectionUno").addClass("uno");
+            $("#noticiaDiv").hide();
+            $("#indicadoresDiv").show();
+            $("#text-noticia").html("Indicadores");
+
 
             typeDefault = 2;
             setTimeout(function (){
@@ -139,7 +144,15 @@ $(document).ready(function (){
                         bottom: "123px",
                         left: "150px",
                     });
+
+                    $("#sectionUno").removeClass("uno");
+                    $("#indicadoresDiv").hide();
+                    $("#proyectosDiv").show();
+                    $("#text-noticia").html("Proyectos");
+
                 });
+
+
 
             },1000)
 
