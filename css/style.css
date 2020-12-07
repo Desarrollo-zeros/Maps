@@ -398,3 +398,5 @@ div.verticalLine {
   font-size: 1rem;
   font-weight: bold;
 }
+
+svg {width:100%;transform-origin:top left;}

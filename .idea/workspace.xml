@@ -19,7 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a4f951b-d1fa-4c28-8f11-ee65fdc234bd" name="Default Changelist" comment="" />
+    <list default="true" id="9a4f951b-d1fa-4c28-8f11-ee65fdc234bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/SVGPanZoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/pais.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/departamento.html" beforeDir="false" afterPath="$PROJECT_DIR$/departamento.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +93,7 @@
       <workItem from="1607043159262" duration="83000" />
       <workItem from="1607043294526" duration="25116000" />
       <workItem from="1607100603011" duration="14054000" />
-      <workItem from="1607289432744" duration="599000" />
+      <workItem from="1607289432744" duration="33248000" />
     </task>
     <servers />
   </component>
@@ -119,10 +129,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="437" y="233" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607043124668" />
-    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1607043309393">
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1607303985787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607043309393" />
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607303985787" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1607324993353">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607324993353" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1607042868701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -135,15 +149,19 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="84" y="87" width="1167" height="589" key="dock-window-2/0.0.1600.860@0.0.1600.860" timestamp="1607110027316" />
-    <state x="433" y="138" width="555" height="534" key="find.popup" timestamp="1607242351488">
+    <state x="433" y="138" width="555" height="534" key="find.popup" timestamp="1607335699773">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="433" y="138" width="555" height="534" key="find.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607242351488" />
+    <state x="433" y="138" width="555" height="534" key="find.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607335699773" />
     <state x="507" y="163" width="585" height="534" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1607107756146" />
-    <state x="345" y="49" width="675" height="678" key="search.everywhere.popup" timestamp="1607236929435">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1607316193487">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="345" y="49" width="675" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607236929435" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607316193487" />
+    <state x="345" y="49" width="675" height="678" key="search.everywhere.popup" timestamp="1607316745354">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="345" y="49" width="675" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607316745354" />
     <state x="1709" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1607231740983" />
     <state x="404" y="58" width="791" height="801" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1607103293932" />
   </component>

@@ -1,52 +1,62 @@
-// Doughnut chart
-var ctx = document.getElementById('circlemap').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Dairy', 'Fruits', 'Lean meats', 'Vegetables', 'Whole grains'],
-        datasets: [{
-            data: [27.92, 17.53, 14.94, 26.62, 12.99],
-            backgroundColor: ['#e91e63', '#00e676', '#ff5722', '#1e88e5', '#ffd600'],
-            borderWidth: 0.5 ,
-            borderColor: '#ddd'
-        }]
+
+
+var circlemapConfig =  {
+    title: {
+        display: true,
+        //text: 'Recommended Daily Diet',
+        position: 'top',
+        fontSize: 16,
+        fontColor: '#111',
+        padding: 20
     },
-    options: {
-        title: {
-            display: true,
-            //text: 'Recommended Daily Diet',
-            position: 'top',
-            fontSize: 16,
+    legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+            boxWidth: 20,
             fontColor: '#111',
-            padding: 20
-        },
-        legend: {
-            display: true,
-            position: 'bottom',
-            labels: {
-                boxWidth: 20,
-                fontColor: '#111',
-                padding: 15
+            padding: 15
+        }
+    },
+    tooltips: {
+        enabled: false
+    },
+    plugins: {
+        datalabels: {
+            color: '#111',
+            textAlign: 'center',
+            font: {
+                lineHeight: 1.6
+            },
+            formatter: function(value, circlemap) {
+                return value + '%';
             }
         },
-        tooltips: {
-            enabled: false
-        },
-        plugins: {
-            datalabels: {
-                color: '#111',
-                textAlign: 'center',
-                font: {
-                    lineHeight: 1.6
-                },
-                formatter: function(value, ctx) {
-                    return value + '%';
-                }
-            },
 
-        }
     }
+}
+
+var circleMapData = {
+    labels: ['Gob', 'Inter', ' Org nal Pri', 'Org nal Pub', 'Mun'],
+    datasets: [{
+        data: [],
+        backgroundColor: ['#e91e63', '#00e676', '#ff5722', '#1e88e5', '#ffd600'],
+        borderWidth: 0.5 ,
+        borderColor: '#ddd'
+    }]
+};
+
+var circlemap = document.getElementById('circlemap').getContext('2d');
+var circlemapChart = new Chart(circlemap, {
+    type: 'pie',
+    data: circleMapData,
+    options : circlemapConfig,
 });
+
+
+
+
+
 
 
 function createChart(id, type, options) {
@@ -71,11 +81,11 @@ function createChart(id, type, options) {
 
 
 
-var donutOptions = {
+var donutOptions1 = {
     cutoutPercentage: 40,
     legend: {
-        display: false,
-        position: 'top',
+        display: true,
+        position: 'bottom',
         labels: {
             pointStyle: 'circle',
             usePointStyle: true,
@@ -86,26 +96,19 @@ var donutOptions = {
         enabled: false,
         custom: function(tooltipModel) {
             // Tooltip Element
-            var tooltipEl = document.getElementById('circlemap1-tooltip');
+            var tooltipEl;
+            switch (typeDefault){
+                case 1:{
+                     tooltipEl = document.getElementById('circlemap1-tooltip');
+                    break
+                }
+                case 2:{
+                    tooltipEl = document.getElementById('circlemap1-tooltip1');
+                    break;
+                }
+            }
 
 
-
-            // Create element on first render
-            /*if (!tooltipEl) {
-                tooltipEl = document.createElement('div');
-                tooltipEl.id = 'table-tooltip';
-                tooltipEl.innerHTML = '<table></table>';
-                document.body.appendChild(tooltipEl);
-            }else{
-                tooltipEl.innerHTML = '<table></table>';
-            }*/
-
-
-
-
-
-            //$tableTooltip1 = $("#table-tooltip");
-            //tooltipEl.classList.add("table-tooltip1");
             tooltipEl.classList.add("active");
 
             function getBody(bodyItem) {
@@ -149,7 +152,7 @@ var donutOptions = {
         },
         callbacks: {
             title: function(tooltipItem, data) {
-                return  ("Eje"+" "+data['labels'][tooltipItem[0]['index']]).toUpperCase();
+                return  ("Eje"+" "+data['labels'][tooltipItem[0]['index']]).toUpperCase() + " #" +api.dataEjeInidicativo1[data['labels'][tooltipItem[0]['index']]].total;
             },
             label: function(tooltipItem, data) {
                 return data['datasets'][0]['data'][tooltipItem['index']];
@@ -170,22 +173,23 @@ var donutOptions = {
     }
 };
 var chDonutData1 = {
-    labels: ['AMBIENTAl', 'GOBERNAZA', 'ECONOMICO','SOCIAL'],
+    labels: ['AMBIENTAL', 'GOBERNAZA', 'ECONOMICO','SOCIAL'],
     datasets: [
         {
             backgroundColor: colors.slice(0,3),
             borderWidth: 1,
-            data: [3.9,0.3, 55.3,40.5]
+            data: []
         }
     ],
 
 };
-var chDonut1 = document.getElementById("circlemap1").getContext('2d');
-if (chDonut1) {
-    new Chart(chDonut1, {
+var circlemap1Chart;
+var circlemap1 = document.getElementById("circlemap1").getContext('2d');
+if (circlemap1) {
+    circlemap1Chart= new Chart(circlemap1, {
         type: 'pie',
         data: chDonutData1,
-        options: donutOptions
+        options: donutOptions1
     });
 }
 
@@ -193,34 +197,32 @@ if (chDonut1) {
 
 
 
-var donutOptions3 = {
-    cutoutPercentage: 40,
-    legend: {
-        display: false,
-        position:'bottom',
-        labels:{
-            pointStyle:'circle',
-            usePointStyle:true,
-            fontColor: '#ffffff',
-        }
-    },
 
-};
-var chDonutData3 = {
-    labels: ['Sociales', 'Economicos'],
-    datasets: [
-        {
-            backgroundColor: colors.slice(0,2),
-            borderWidth: 0,
-            data: [74, 11]
-        }
-    ]
-};
-var chDonut3 = document.getElementById("circlemap3").getContext('2d');
-if (chDonut3) {
-    new Chart(chDonut3, {
+
+
+
+
+var circlemap3Chart;
+var circlemap3;
+var chDonut3;
+var chDonut3Chart;
+
+function cargarNewCircle(){
+
+
+    circlemap3 = document.getElementById('circlemap3').getContext('2d');
+    circlemap3Chart = new Chart(circlemap3, {
         type: 'pie',
-        data: chDonutData3,
-        options: donutOptions3
+        data: circleMapData,
+        options : circlemapConfig,
     });
+    chDonut3 = document.getElementById("circlemap4").getContext('2d');
+    if (chDonut3) {
+        chDonut3Chart = new Chart(chDonut3, {
+            type: 'pie',
+            data: chDonutData1,
+            options: donutOptions1
+        });
+    }
 }
+
