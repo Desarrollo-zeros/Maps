@@ -36,7 +36,9 @@ $(document).ready(function (){
     hombresId.load(hombresId.attr("src"));
     mujeresId.load(mujeresId.attr("src"));
     jovenId.load(jovenId.attr("src"));
-
+    
+    
+   
 
     api.post("dependencias",{}).then(resp => {
         dataDependencias = resp;
@@ -64,7 +66,13 @@ $(document).ready(function (){
 
 
     setTimeout(function(){
+    //linea punteada---------
+    $('#line1').hide();
+    $('#line2').hide();
+    $('#line3').hide();
+    $('#line4').hide();
 
+ 
         $("path").attr("filter","url(#dropShadow)")
 
         $("path.cls-1").on("mouseover",function(){
@@ -110,6 +118,14 @@ $(document).ready(function (){
             $("#indicadoresDiv").show();
             $("#text-noticia").html("Indicadores");
 
+            //Linea punteada--------------------------------------------------------------------
+            $('#line1').show();
+            $('#line2').show();
+            $('#line3').show();
+            $('#line4').show();
+
+            
+            
 
             typeDefault = 2;
             setTimeout(function (){
