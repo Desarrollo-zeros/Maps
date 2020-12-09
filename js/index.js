@@ -36,11 +36,19 @@ $(document).ready(function (){
     hombresId.load(hombresId.attr("src"));
     mujeresId.load(mujeresId.attr("src"));
     jovenId.load(jovenId.attr("src"));
+    $("#selectAnoCargue").val("2019");
 
 
-    api.post("dependencias",{}).then(resp => {
-        dataDependencias = resp;
-    });
+
+
+    api.post("get_data_nfc",{
+        "table" : "view_dependencias",
+        type : 3
+    },function (data){
+        dataDependencias = data;
+    })
+
+    getLoad();
 
     //loader Map Colombia
     $("#colombia").load("img/Colombia.svg");
@@ -91,7 +99,7 @@ $(document).ready(function (){
             $(".pais-view").removeClass("col-sm-5").addClass("col-sm-3");
             $(".grafic2").show();
             nameDpto = $(this).attr("url");
-
+            getLoad();
 
             dependencia = dataDependencias.find(x => x.nombre.trim().toLowerCase() ===  nameDpto.trim().toLowerCase())
 

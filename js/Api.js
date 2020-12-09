@@ -1,7 +1,7 @@
 class Api{
 
     constructor() {
-        this.url = "http://derco.ingenioitc.com/api/";
+        this.url = "http://localhost/sustain_map/app_modules/maps/API/maps/";
         this.response = null;
 
         this.dataVectores= {};
@@ -27,62 +27,61 @@ class Api{
 
     }
 
-    post = function (url, data = []){
+
+
+
+    post = function (url, data = [],sucessCallBack, falloCallback){
         const  _self = this;
         url = _self.url+url;
-
-        return new Promise((resolve, reject) => {
-            fetch( url, {
-                method: 'POST', // or 'PUT'
-                body: JSON.stringify(data), // data can be `string` or {object}!
-                headers:{
-                    'Content-Type': 'application/json'
-                }
-            }).then(res => res.json())
-                .catch(error => {
-                    reject(error);
-                })
-                .then(response => {
-                    _self.response = response;
-                    resolve(_self.response);
-                });
-        }).then( x => {
-            return x;
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: data,
+            timeout: 30000,
+            dataType: 'json',
+            cache: false,
+            success : sucessCallBack,
+            error : falloCallback
         });
     }
 
     getInversion = function ($data = {}, sucessCallBack, falloCallback){
         const  _self = this;
         $data.anio = $("#selectAnoCargue").val();
+        $data.type = 1;
+        $data.table = "monto_inversion";
 
-       switch (typeDefault){
-           case 2:{
+        switch (typeDefault){
+             case 2:{
                $data.dpto = nameDpto;
                break;
-           }
-       }
-        _self.post("inversion", $data).then(sucessCallBack, falloCallback);
+            }
+        }
+        _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
     }
 
     getBeneficiarios = function ($data = {}, sucessCallBack, falloCallback){
         const  _self = this;
         $data.anio = $("#selectAnoCargue").val();
+        $data.type = 1;
+        $data.table = "monto_beneficiarios";
 
         switch (typeDefault){
             case 2:{
                 $data.dpto = nameDpto;
+
                 break;
             }
         }
 
-        _self.post("beneficiarios", $data).then(sucessCallBack, falloCallback);
+        _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
     }
 
 
     getVectores = function ($data = {}, sucessCallBack, falloCallback){
         const  _self = this;
         $data.anio = $("#selectAnoCargue").val();
-
+        $data.type = 2;
         switch (typeDefault){
             case 2:{
                 $data.dpto = nameDpto;
@@ -90,13 +89,14 @@ class Api{
             }
         }
 
-        _self.post("vectores", $data).then(sucessCallBack, falloCallback);
+        _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
     }
 
     getVieEjeIndicativo = function ($data = {}, sucessCallBack, falloCallback){
         const  _self = this;
         $data.anio = $("#selectAnoCargue").val();
-
+        $data.type = 1;
+        $data.table = "view_eje_indicativo";
         switch (typeDefault){
             case 2:{
                 $data.dpto = nameDpto;
@@ -104,21 +104,21 @@ class Api{
             }
         }
 
-        _self.post("viewEjeIndicativo", $data).then(sucessCallBack, falloCallback);
+        _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
     }
 
     getVieEjeIndicativo1 = function ($data = {}, sucessCallBack, falloCallback){
         const  _self = this;
         $data.anio = $("#selectAnoCargue").val();
-
+        $data.type = 1;
+        $data.table = "view_eje_eje";
         switch (typeDefault){
             case 2:{
                 $data.dpto = nameDpto;
                 break;
             }
         }
-
-        _self.post("viewEjeIndicativo1", $data).then(sucessCallBack, falloCallback);
+        _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
     }
 
 }
@@ -127,7 +127,6 @@ const  api = new Api();
 
 
 $("#selectAnoCargue").change(function (){
-
     getLoad();
 });
 
@@ -154,7 +153,7 @@ function getLoad(){
             $("#tercero").html(formatCurrency("es-CO", "COP", data.tercero))
         }
     }, function (error){
-
+            console.log(error);
     });
 
 

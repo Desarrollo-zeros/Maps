@@ -20,14 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a4f951b-d1fa-4c28-8f11-ee65fdc234bd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/Api/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -92,7 +95,9 @@
       <workItem from="1607043294526" duration="25116000" />
       <workItem from="1607100603011" duration="14054000" />
       <workItem from="1607289432744" duration="34083000" />
-      <workItem from="1607343565308" duration="275000" />
+      <workItem from="1607343565308" duration="1217000" />
+      <workItem from="1607486043520" duration="10000" />
+      <workItem from="1607492236349" duration="5475000" />
     </task>
     <servers />
   </component>
@@ -128,10 +133,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="437" y="233" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607043124668" />
-    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1607303985787">
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1607486051618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607303985787" />
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607486051618" />
     <state x="517" y="287" key="NewPhpFileDialog" timestamp="1607324993353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -157,10 +162,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607316193487" />
-    <state x="345" y="49" width="675" height="678" key="search.everywhere.popup" timestamp="1607316745354">
+    <state x="345" y="49" width="675" height="678" key="search.everywhere.popup" timestamp="1607494352558">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="345" y="49" width="675" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607316745354" />
+    <state x="345" y="49" width="675" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1607494352558" />
     <state x="1709" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1607231740983" />
     <state x="404" y="58" width="791" height="801" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1607103293932" />
   </component>
