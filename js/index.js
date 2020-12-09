@@ -11,6 +11,12 @@ var afroId=$("#afroDiv");
 var hombresId=$("#hombreDiv");
 var mujeresId=$("#mujerDiv");
 var jovenId=$("#jovenDiv");
+
+//imagenes menu 2
+var img1=$("#img1");
+var img2=$("#img2");
+var img3=$("#img3");
+
 $tableTooltip1 = null;
 
 var typeDefault = 1;
@@ -37,7 +43,10 @@ $(document).ready(function (){
     mujeresId.load(mujeresId.attr("src"));
     jovenId.load(jovenId.attr("src"));
     
-    
+
+    img1.load("img/iconos/grafico-de-lineas.svg");
+    img2.load("img/iconos/trabajo-en-equipo.svg");
+    img3.load("img/iconos/monedas.svg");
    
 
     api.post("dependencias",{}).then(resp => {
@@ -72,13 +81,18 @@ $(document).ready(function (){
     $('#line3').hide();
     $('#line4').hide();
 
-    
+
     $('#btn1').hide();
     $('#btn2').hide();
     $('#btn3').hide();
+    
     $('#txt1').hide();
     $('#txt2').hide();
     $('#txt3').hide();
+    
+    $('#tn3').hide();
+    $('#tn2').hide();
+    $('#tn1').hide();
 
     $('#placehd').hide();
  
@@ -173,10 +187,16 @@ $(document).ready(function (){
                     $('#btn1').show();
                     $('#btn2').show();
                     $('#btn3').show();
+                    
                     $('#txt1').show();
                     $('#txt2').show();
                     $('#txt3').show();
-            
+
+                    $('#tn3').show();
+                    $('#tn2').show();
+                    $('#tn1').show();
+
+
                     $('#circle-menu-act').hide();
                     $('#placehd').show();
 
