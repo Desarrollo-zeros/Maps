@@ -72,6 +72,15 @@ $(document).ready(function (){
     $('#line3').hide();
     $('#line4').hide();
 
+    
+    $('#btn1').hide();
+    $('#btn2').hide();
+    $('#btn3').hide();
+    $('#txt1').hide();
+    $('#txt2').hide();
+    $('#txt3').hide();
+
+    $('#placehd').hide();
  
         $("path").attr("filter","url(#dropShadow)")
 
@@ -81,7 +90,6 @@ $(document).ready(function (){
             //$(this).css("fill", "#"+randomColor);#960303
             $(this).css("fill", "#960303");
         })
-
         $("path.cls-1").click(function(){
             var url = $(this).attr("url");
             $("#colombia").css("width","90%");
@@ -123,7 +131,7 @@ $(document).ready(function (){
             $('#line2').show();
             $('#line3').show();
             $('#line4').show();
-
+            
             
             
 
@@ -160,6 +168,17 @@ $(document).ready(function (){
                         bottom: "123px",
                         left: "150px",
                     });
+
+                    //menu 2 ---------------------------------------------------------------------------
+                    $('#btn1').show();
+                    $('#btn2').show();
+                    $('#btn3').show();
+                    $('#txt1').show();
+                    $('#txt2').show();
+                    $('#txt3').show();
+            
+                    $('#circle-menu-act').hide();
+                    $('#placehd').show();
 
                     $("#sectionUno").removeClass("uno");
                     $("#indicadoresDiv").hide();
