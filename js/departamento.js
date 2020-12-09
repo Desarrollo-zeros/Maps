@@ -11,39 +11,11 @@ var hombresId=$("#hombreDiv");
 var mujeresId=$("#mujerDiv");
 var jovenId=$("#jovenDiv");
 
-function reposicionar(){//no funcionó
-    //$("#e1").find("a").find("div").attr("style","bottom:-250;right:20");
-    //$("#e2").find("a").find("div").attr("style","bottom:-200;right:20");
-    //document.getElementById("e1").style.right="250px";
-    //document.getElementById("e1").style.bottom="250px";
-}
-function reemplazo(){
-    //no funcionó
-    document.getElementById("tipo11").style.display="none";
-    document.getElementById("tipo12").style.display="none";
-    document.getElementById("tipo13").style.display="none";
-    document.getElementById("tipo14").style.display="none";
-    document.getElementById("tipo15").style.display="none";
-    document.getElementById("tipo21").style.display="block";
-    document.getElementById("tipo22").style.display="block";
-    document.getElementById("tipo23").style.display="block";
-}
-function reemplazo2(){
-    //no funcionó
-    document.getElementById("tipo11").style.display="block";
-    document.getElementById("tipo12").style.display="block";
-    document.getElementById("tipo13").style.display="block";
-    document.getElementById("tipo14").style.display="block";
-    document.getElementById("tipo15").style.display="block";
-    document.getElementById("tipo21").style.display="none";
-    document.getElementById("tipo22").style.display="none";
-    document.getElementById("tipo23").style.display="none";
-}
+
 
 
 function mostrarMunicipio(){
-    //reposicionar();no se usa
-    //reemplazo(); no se usa
+    
     document.getElementById("departamentoDiv").style.display="none";
     document.getElementById("departamentoDiv1").style.display="none";
     document.getElementById("departamentoDiv2").style.display="none";
@@ -90,14 +62,10 @@ $(document).ready(function (){
 
     document.getElementById("municipioDiv").style.display="none";
     document.getElementById("municipioDiv2").style.display="none";
-  //  document.getElementById("municipioDiv3").style.display="none";
-    //loader Map Colombia
+  
+
     $("#mapa1").load("img/Colombia.svg");
 
-    
-
-    //$("Cesar").css("fill", "#e90000");
-   
 
     //datos variables
     var anio="2019";
@@ -123,7 +91,6 @@ $(document).ready(function (){
         $("#"+idDpta).css("fill","#960303");
 
         $("#departsv").load("img/departamentos/"+name+".svg");
-        
         document.getElementById("departamentoSpan").innerHTML=name;
 
         $("path.cls-1").on("mouseover",function(){

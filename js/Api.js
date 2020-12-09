@@ -50,13 +50,8 @@ class Api{
         $data.anio = $("#selectAnoCargue").val();
         $data.type = 1;
         $data.table = "monto_inversion";
-
-        switch (typeDefault){
-             case 2:{
-               $data.dpto = nameDpto;
-               break;
-            }
-        }
+        $data.dpto = nameDpto;
+        $data.municipio = nameMunicipio;
         _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
     }
 
@@ -65,14 +60,8 @@ class Api{
         $data.anio = $("#selectAnoCargue").val();
         $data.type = 1;
         $data.table = "monto_beneficiarios";
-
-        switch (typeDefault){
-            case 2:{
-                $data.dpto = nameDpto;
-
-                break;
-            }
-        }
+        $data.dpto = nameDpto;
+        $data.municipio = nameMunicipio;
 
         _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
     }
@@ -82,13 +71,8 @@ class Api{
         const  _self = this;
         $data.anio = $("#selectAnoCargue").val();
         $data.type = 2;
-        switch (typeDefault){
-            case 2:{
-                $data.dpto = nameDpto;
-                break;
-            }
-        }
-
+        $data.dpto = nameDpto;
+        $data.municipio = nameMunicipio;
         _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
     }
 
@@ -97,12 +81,8 @@ class Api{
         $data.anio = $("#selectAnoCargue").val();
         $data.type = 1;
         $data.table = "view_eje_indicativo";
-        switch (typeDefault){
-            case 2:{
-                $data.dpto = nameDpto;
-                break;
-            }
-        }
+        $data.dpto = nameDpto;
+        $data.municipio = nameMunicipio;
 
         _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
     }
@@ -110,17 +90,79 @@ class Api{
     getVieEjeIndicativo1 = function ($data = {}, sucessCallBack, falloCallback){
         const  _self = this;
         $data.anio = $("#selectAnoCargue").val();
-        $data.type = 1;
+        $data.type = 0;
         $data.table = "view_eje_eje";
-        switch (typeDefault){
-            case 2:{
-                $data.dpto = nameDpto;
-                break;
-            }
-        }
+        $data.dpto = nameDpto;
+        $data.municipio = nameMunicipio;
         _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
     }
 
+    getVieEjeIndicativo2 = function ($data = {}, sucessCallBack, falloCallback){
+        const  _self = this;
+        $data.anio = $("#selectAnoCargue").val();
+        $data.type = 4;
+        $data.table = "view_eje_eje_dpta_municipio";
+        $data.dpto = nameDpto;
+        $data.municipio = nameMunicipio;
+
+        _self.post("get_data_nfc", $data,function (data){
+            console.log(data);
+
+            var AMBIENTAL = data.find(x => x.eje === "AMBIENTAL");
+            var GOBERNANZA =  data.find(x => x.eje === "GOBERNANZA");
+            var ECONOMICO =  data.find(x => x.eje === "ECONOMICO");
+            var SOCIAL = data.find(x => x.eje === "SOCIAL");
+
+            if(!AMBIENTAL){
+                AMBIENTAL = {total : 0};
+            }
+
+            if(!GOBERNANZA){
+                GOBERNANZA = {total : 0};
+            }
+
+            if(!ECONOMICO){
+                ECONOMICO = {total : 0};
+            }
+
+            if(!SOCIAL){
+                SOCIAL = {total : 0};
+            }
+
+            api.dataEjeInidicativo1 = {
+                AMBIENTAL,
+                GOBERNANZA,
+                ECONOMICO,
+                SOCIAL
+            };
+            // Doughnut chart
+
+
+
+            if (data && data[0].ano_carge) {
+                console.log(data);
+
+                chDonutData1.datasets[0].data = [
+                    getPorcentaje(api.dataEjeInidicativo1["AMBIENTAL"].total,100),
+                    getPorcentaje(api.dataEjeInidicativo1["GOBERNANZA"].total,100),
+                    getPorcentaje(api.dataEjeInidicativo1["ECONOMICO"].total,100),
+                    getPorcentaje(api.dataEjeInidicativo1["SOCIAL"].total,100),
+                ];
+
+
+                chDonut3 = document.getElementById("circlemap4").getContext('2d');
+                if (chDonut3) {
+                    chDonut3Chart = new Chart(chDonut3, {
+                        type: 'pie',
+                        data: chDonutData1,
+                        options: donutOptions1
+                    });
+                }
+            }
+        }, function (error){
+            console.log(error);
+        });
+    }
 }
 
 const  api = new Api();
@@ -130,7 +172,11 @@ $("#selectAnoCargue").change(function (){
     getLoad();
 });
 
+function getLoadMunicipios(){
+    getLoad();
+    api.getVieEjeIndicativo2();
 
+}
 
 function getLoad(){
     //inversion
@@ -186,12 +232,29 @@ function getLoad(){
             console.log(data["vectores"]);
             console.log(data["proyectos"]);
 
+
+            if(!data["proyectos"]){
+                data["proyectos"] = {total : 0}
+            }
+
+            if(!data["vectores"]){
+                data["vectores"] = {total : 0}
+            }
+
             api.dataVectores = {
                 total_proyecto : data["proyectos"].total,
                 infraestructuraValue : data["vectores"].find(x => x.vector.toLowerCase() === ("INFRAESTRUCTURA").toLowerCase()),
                 productividadValue : data["vectores"].find(x => x.vector.toLowerCase() === ("PRODUCTIVIDAD").toLowerCase()),
                 cuidadoRecursosNaturales : data["vectores"].find(x => x.vector.toLowerCase() === ("CUIDADO DE RECURSOS NATURALES").toLowerCase()),
                 costosProduccion : data["vectores"].find(x => x.vector.toLowerCase() === ("COSTOS DE PRODUCCION").toLowerCase())
+            };
+
+            api.dataVectores = {
+                total_proyecto : api.dataVectores.total_proyecto ? api.dataVectores.total_proyecto.total : 0,
+                infraestructuraValue : api.dataVectores.infraestructuraValue ? api.dataVectores.infraestructuraValue.total : 0,
+                productividadValue : api.dataVectores.productividadValue ? api.dataVectores.productividadValue.total : 0,
+                cuidadoRecursosNaturales : api.dataVectores.cuidadoRecursosNaturales ? api.dataVectores.cuidadoRecursosNaturales.total : 0,
+                costosProduccion : api.dataVectores.costosProduccion ? api.dataVectores.costosProduccion.total : 0,
             };
 
             $("#total_proyecto").html(data["proyectos"].total);
@@ -205,12 +268,12 @@ function getLoad(){
 
     });
 
-    function getPorcentaje(data, value = 1000000){
-        return Math.round(data/value)
-    }
+
 
     api.getVieEjeIndicativo({}, function (data){
         console.log(data);
+
+
 
         // Doughnut chart
         circlemapChart.clear();
@@ -278,9 +341,7 @@ function getLoad(){
             SOCIAL
         };
         // Doughnut chart
-        circlemap1Chart.clear();
-        circlemap1Chart.data.datasets[0].data = [];
-        circlemap1Chart.update();
+
 
 
         if (data && data[0].ano_carge) {
@@ -298,6 +359,7 @@ function getLoad(){
 
             switch (typeDefault) {
                 case 1: {
+
                     circlemap1 = document.getElementById("circlemap1").getContext('2d');
                     if (circlemap1) {
                         circlemap1Chart = new Chart(circlemap1, {
@@ -309,6 +371,7 @@ function getLoad(){
                     break;
                 }
                 case 2:{
+
                     chDonut3 = document.getElementById("circlemap4").getContext('2d');
                     if (chDonut3) {
                         chDonut3Chart = new Chart(chDonut3, {
@@ -328,6 +391,14 @@ function getLoad(){
     }, function (error){
 
     });
+
+
+}
+
+
+
+function getPorcentaje(data, value = 1000000){
+    return Math.round(data/value)
 }
 
 

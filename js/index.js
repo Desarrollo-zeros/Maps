@@ -11,19 +11,52 @@ var afroId=$("#afroDiv");
 var hombresId=$("#hombreDiv");
 var mujeresId=$("#mujerDiv");
 var jovenId=$("#jovenDiv");
+
+//imagenes menu 2
+var img1=$("#img1");
+var img2=$("#img2");
+var img3=$("#img3");
+
 $tableTooltip1 = null;
 
 var typeDefault = 1;
 
 var nameDpto;
 
+var nameMunicipio;
 var dataDependencias = [];
 var title = "MAPA DE SOSTENIBILIDAD";
 
 var dependencia;
 
 var selectorPathMun;
+$description_dpto = null;
+$tableTooltip_1 = null;
+$tableTooltip = null;
+var  _dpto;
+var muni;
+
 $(document).ready(function (){
+
+    //linea punteada---------
+    $('#line1').hide();
+    $('#line2').hide();
+    $('#line3').hide();
+    $('#line4').hide();
+
+
+    $('#btn1').hide();
+    $('#btn2').hide();
+    $('#btn3').hide();
+
+    $('#txt1').hide();
+    $('#txt2').hide();
+    $('#txt3').hide();
+
+    $('#tn3').hide();
+    $('#tn2').hide();
+    $('#tn1').hide();
+
 
 
     monedaDiv.load(monedaDiv.attr("src"));
@@ -38,6 +71,10 @@ $(document).ready(function (){
     jovenId.load(jovenId.attr("src"));
     $("#selectAnoCargue").val("2019");
 
+    img1.load("img/iconos/grafico-de-lineas.svg");
+    img2.load("img/iconos/trabajo-en-equipo.svg");
+    img3.load("img/iconos/monedas.svg");
+   
 
 
 
@@ -73,6 +110,9 @@ $(document).ready(function (){
 
     setTimeout(function(){
 
+
+    $('#placehd').hide();
+ 
         $("path").attr("filter","url(#dropShadow)")
 
         $("path.cls-1").on("mouseover",function(){
@@ -81,11 +121,10 @@ $(document).ready(function (){
             //$(this).css("fill", "#"+randomColor);#960303
             $(this).css("fill", "#960303");
         })
-
         $("path.cls-1").click(function(){
             var url = $(this).attr("url");
             $("#colombia").css("width","90%");
-
+            _dpto =  $(this);
             $("#depav")
                 .css("width","100%")
                 .css("right" , "0%")
@@ -94,11 +133,13 @@ $(document).ready(function (){
 
             //window.location.href = "departamento.html?name="+$(this).attr("url")+"&id="+$(this).attr("id")
             $(".depav-view").show();
-            $("#depav").load("img/departamentos/"+$(this).attr("url")+".svg");
+            nameDpto = $(this).attr("url");
+            $("#depav").load("img/departamentos/"+nameDpto+".svg");
             $(".grafic1").hide();
             $(".pais-view").removeClass("col-sm-5").addClass("col-sm-3");
             $(".grafic2").show();
-            nameDpto = $(this).attr("url");
+            $("#divCirclemap3").show();
+
             getLoad();
 
             dependencia = dataDependencias.find(x => x.nombre.trim().toLowerCase() ===  nameDpto.trim().toLowerCase())
@@ -113,22 +154,65 @@ $(document).ready(function (){
 
             $("#changeTitle").html(title+" "+dependencia.alias+" "+$("#selectAnoCargue").val());
 
+            $("#sectionUno").addClass("uno");
+            $("#noticiaDiv").hide();
+            $("#indicadoresDiv").show();
+            $("#text-noticia").html("Indicadores");
+
+            //Linea punteada--------------------------------------------------------------------
+            $('#line1').show();
+            $('#line2').show();
+            $('#line3').show();
+            $('#line4').show();
+
+
+
+            
+            
+            
 
             typeDefault = 2;
             setTimeout(function (){
-                cargarNewCircle();
-                getLoad();
+
+                $description_dpto = $(".description-dpto");
+
+                $('path.cls-1').hover(function() {
+                    console.log($description_dpto);
+                    $(this).attr("class", "cls-1 heyo");
+                    $description_dpto.addClass('active');
+                    $description_dpto.html($(this).attr('name'));
+                    if(selectorPathMun){
+                        $(selectorPathMun).css("fill","#960303");
+                    }
+                }, function() {
+                    $description_dpto.removeClass('active');
+                    if(selectorPathMun){
+                        $(selectorPathMun).css("fill","#960303");
+                    }
+                });
 
                 $("svg:not('#view_colombia_svg') path").click(function (){
                     $("div#depav svg:not('#view_colombia_svg') path").hide();
                     if($(this).attr("style") == "fill: rgb(150, 3, 3);"){
                         return;
                     }
+                     muni = $(this);
 
+
+                    $("#colombia").load("img/departamentos/"+nameDpto+".svg");
+
+                    setTimeout(function (){
+                        $("#colombia svg #"+muni.attr("id")).css("fill","#960303")
+                    },1000);
+
+
+                    //getLoad();
                     $("#changeTitle").html(title+" "+dependencia.alias+" "+$("#selectAnoCargue").val());
                     $("#separadorCiudad").show();
+                    nameMunicipio = $(this).attr("name");
+                    $("#nameCiudad").append(nameMunicipio);
 
-                    $("#nameCiudad").append( $(this).attr("name"));
+                    getLoadMunicipios();
 
 
                     $(this).css("fill","#960303");
@@ -147,7 +231,36 @@ $(document).ready(function (){
                         bottom: "123px",
                         left: "150px",
                     });
+
+                    //menu 2 ---------------------------------------------------------------------------
+                    $('#btn1').show();
+                    $('#btn2').show();
+                    $('#btn3').show();
+
+                    $('#txt1').show();
+                    $('#txt2').show();
+                    $('#txt3').show();
+
+                    $('#tn3').show();
+                    $('#tn2').show();
+                    $('#tn1').show();
+
+
+                    $('#circle-menu-act').hide();
+                    $('#placehd').show();
+
+                    $("#sectionUno").removeClass("uno");
+                    $("#indicadoresDiv").hide();
+                    $("#proyectosDiv").show();
+                    $("#text-noticia").html("Proyectos");
+
+                    setTimeout(function (){
+                        $("#grafic2").show();
+                        $("#circlemap4").click();
+                        },1000)
                 });
+
+
 
             },1000)
 
@@ -159,6 +272,7 @@ $(document).ready(function (){
 
 
         $('path.cls-1').hover(function() {
+
             $(this).attr("class", "cls-1 heyo");
             $description.addClass('active');
             $description.html($(this).attr('title'));
@@ -180,11 +294,30 @@ $(document).ready(function (){
                 height : "60px"
             });
 
-            $tableTooltip.css({
-                left:  e.pageX-1030,
-                top:   e.pageY -375,
-                height : "60px"
-            });
+            if($description_dpto){
+                $description_dpto.css({
+                    left:  e.pageX-500,
+                    top:   e.pageY - 300,
+                    height : "60px"
+                });
+            }
+
+            if($tableTooltip_1){
+                $tableTooltip_1.css({
+                    left:  e.pageX-300,
+                    top:   e.pageY -100,
+                    height : "60px"
+                });
+            }
+
+            if($tableTooltip){
+                $tableTooltip.css({
+                    left:  e.pageX-1030,
+                    top:   e.pageY -375,
+                    height : "60px"
+                });
+            }
+
         });
 
 
@@ -193,8 +326,38 @@ $(document).ready(function (){
 
 
 
-        $tableTooltip = $(".table-tooltip");
+        $tableTooltip_1 = $(".table-tooltip-1");
 
+        $(".btnnewnew").hover(function (){
+            var id = $(this).attr("data-id");
+            $(".btnnewnew-"+id).css("color","#960303");
+
+            if(id == "moneda"){
+                $("svg.icons#moneda  > g path").css("fill","#960303");
+            }else{
+
+                $("svg.icons#"+id+">.st0").css("fill","#960303");
+            }
+            $("#"+id+".table-tooltip").attr("class", "cls-1 heyo");
+            if(id != "marcador" && id !="crecimiento"){
+                $tableTooltip_1.addClass('active');
+                getHtmlTable(id,$tableTooltip_1,"-1")
+            }
+            if(selectorPathMun){
+                $(selectorPathMun).css("fill","#960303");
+            }
+
+        },function() {
+            var id = $(this).attr("data-id");
+            $(".btnnewnew-"+id).css("color","#7a7979")
+            $("svg.icons#moneda  > g path").css("fill","#717171");
+            $("svg.icons > .st0").css("fill","#717171");
+            $tableTooltip_1.removeClass('active');
+
+            if(selectorPathMun){
+                $(selectorPathMun).css("fill","#960303");
+            }
+        });
 
         $(".ee a").hover(function (){
            var id = $(this).attr("data-id");
@@ -206,9 +369,10 @@ $(document).ready(function (){
                $("svg.icons#"+id+">.st0").css("fill","#960303");
            }
             $("#"+id+".table-tooltip").attr("class", "cls-1 heyo");
-            $tableTooltip.addClass('active');
-            getHtmlTable(id,$tableTooltip)
-
+           if(id != "marcador" && id !="crecimiento"){
+               $tableTooltip.addClass('active');
+               getHtmlTable(id,$tableTooltip)
+           }
             if(selectorPathMun){
                 $(selectorPathMun).css("fill","#960303");
             }
@@ -234,30 +398,33 @@ $(document).ready(function (){
 
 
 
-    function getHtmlTable(id, selector){
+    function getHtmlTable(id, selector, type=""){
 
-        selector.html($("#"+id+"-table-table-tooltip").html());
-
-
-        $("#inversionTotal").html(formatCurrency("es-CO", "COP", api.dataInversion.total_ejecucion));
-        $("#rp").html(formatCurrency("es-CO", "COP", api.dataInversion.rp))
-        $("#fonc").html(formatCurrency("es-CO", "COP", api.dataInversion.fonc))
-        $("#tercero").html(formatCurrency("es-CO", "COP", api.dataInversion.tercero))
-
-        $("#total_beneficiario").html(formatCurrency("es-CO", "COP", api.dataBeneficiarios.total_beneficiario).replace("$",""));
-        $("#afroValue").html(formatCurrency("es-CO", "COP", api.dataBeneficiarios.afroValue));
-        $("#joveValue").html(formatCurrency("es-CO", "COP", api.dataBeneficiarios.joveValue))
-        $("#mujerValue").html(formatCurrency("es-CO", "COP", api.dataBeneficiarios.mujerValue))
-        $("#hombreValue").html(formatCurrency("es-CO", "COP", api.dataBeneficiarios.hombreValue))
+        selector.html($("#"+id+"-table-table-tooltip"+type).html());
 
 
-        $("#total_proyecto").html(api.dataVectores.total_proyecto);
-        $("#infraestructuraValue"). html(api.dataVectores.infraestructuraValue.total);
-        $("#productividadValue"). html(api.dataVectores.productividadValue.total);
-        $("#cuidadoRecursosNaturales"). html(api.dataVectores.cuidadoRecursosNaturales.total);
-        $("#costosProduccion"). html(api.dataVectores.costosProduccion.total);
+        $("#inversionTotal"+type).html(formatCurrency("es-CO", "COP", api.dataInversion.total_ejecucion));
+        $("#rp"+type).html(formatCurrency("es-CO", "COP", api.dataInversion.rp))
+        $("#fonc"+type).html(formatCurrency("es-CO", "COP", api.dataInversion.fonc))
+        $("#tercero"+type).html(formatCurrency("es-CO", "COP", api.dataInversion.tercero))
+
+        $("#total_beneficiario"+type).html(formatCurrency("es-CO", "COP", api.dataBeneficiarios.total_beneficiario).replace("$",""));
+        $("#afroValue"+type).html(formatCurrency("es-CO", "COP", api.dataBeneficiarios.afroValue));
+        $("#joveValue"+type).html(formatCurrency("es-CO", "COP", api.dataBeneficiarios.joveValue))
+        $("#mujerValue"+type).html(formatCurrency("es-CO", "COP", api.dataBeneficiarios.mujerValue))
+        $("#hombreValue"+type).html(formatCurrency("es-CO", "COP", api.dataBeneficiarios.hombreValue))
+
+
+        $("#total_proyecto"+type).html(api.dataVectores.total_proyecto);
+        $("#infraestructuraValue"+type). html(api.dataVectores.infraestructuraValue.total);
+        $("#productividadValue"+type). html(api.dataVectores.productividadValue.total);
+        $("#cuidadoRecursosNaturales"+type). html(api.dataVectores.cuidadoRecursosNaturales.total);
+        $("#costosProduccion"+type). html(api.dataVectores.costosProduccion.total);
 
     }
+
+
+
 
 
 

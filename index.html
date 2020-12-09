@@ -22,6 +22,128 @@
 
 
         <div class="row" dblclick="window.location.href='index.html' " >
+            <!-- linea punteada -->
+            <!--div id="lineaPunteada"-->
+                <hr id="line1" style="left:210px !important ;top:460px;  width: 200px !important;position: absolute !important;z-index: 99;border:1px dotted gray;" />
+                <hr id="line2" style="left:411px !important ;top:410px; height: 100px !important;position: absolute !important;z-index: 98;border-left: 1px dotted gray;"/>
+                <hr id="line3" style="left:412px !important ;top:410px;  width:  10px !important;position: absolute !important;z-index: 100;border:1px dotted gray;" />
+                <hr id="line4" style="left:412px !important ;top:510px;  width:  10px !important;position: absolute !important;z-index: 101;border:1px dotted gray;" />
+            <!--/div --->
+
+            <!-- menu 2 --------------------------------->
+            <div class="table-tooltip-1"></div>
+            <!-- imagenes-->
+            <div data-id="grafico" class="btnnewnew" id="btn1" style="left:935px !important ;top:345px;  width: 200px !important;position: absolute !important;z-index: 101;">
+
+                <svg id="img1" style="width:60px !important;height: 60px !important;">
+                </svg>
+
+                <div id="grafico-table-table-tooltip-1" style="display: none">
+                    <table class="table table-striped table-dark table-bordered">
+                        <tbody>
+                        <tr>
+                            <td> <span style="text-align: left !important;font-size: 30px;" id="infraestructuraValue-1"></span><br><span>Infraestructura</span> </td>
+                        </tr>
+                        <tr>
+                            <td> <span style="text-align: left;font-size: 30px;" id="productividadValue-1"></span><br><span>Productividad</span> </td>
+                        </tr>
+                        <tr>
+                            <td><span style="text-align: left; font-size: 30px;" id="cuidadoRecursosNaturales-1"></span><br><span>Cuidado de Recursos Naturales</span></td>
+                        </tr>
+                        <tr>
+                            <td><span style="text-align: left;font-size: 30px;" id="costosProduccion-1"></span><br><span>Costos de Producción</span> </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div data-id="moneda" class="btnnewnew" id="btn2" style="width:60px !important;height: 60px !important;left:935px !important ;top:445px;  width: 200px !important;position: absolute !important;z-index: 101" >
+
+                <svg id="img3" style="width:60px !important;height: 60px !important;">
+
+                </svg>
+
+                <div id="moneda-table-table-tooltip-1" style="display: none" >
+                    <table id="moneda-table-1" class="table table-striped table-dark table-bordered">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">FoNC</th>
+                            <th scope="col">TerCeros</th>
+                            <th scope="col">RP</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td id="fonc-1"></td>
+                            <td id="tercero-1"></td>
+                            <td id="rp-1"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div data-id="equipo" class="btnnewnew" id="btn3" style="width:60px !important;height: 60px !important;left:935px !important ;top:545px;  width: 200px !important;position: absolute !important;z-index: 101" >
+
+                <svg id="img2" style="width:60px !important;height: 60px !important;">
+
+                </svg>
+
+                <div id="equipo-table-table-tooltip-1" style="display: none">
+                    <table class="table table-striped table-dark table-bordered">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div id="afroDiv-1" src="img/Iconos_Beneficiarios/Etnia.svg"  style="width: 50px;height: 50px;"></div>
+                                <span id="afroValue-1"></span><br><span style="font-weight: bold;">Afro</span>
+                            </td>
+                            <td>
+                                <div id="jovenDiv-1" src="img/Iconos_Beneficiarios/chico.svg" style="width: 50px;height: 50px;"></div>
+                                <span id="joveValue-1"></span><br><span style="font-weight: bold;">Jovenes</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="mujerDiv-1" src="img/Iconos_Beneficiarios/mujer.svg" style="width: 50px;height: 50px;"></div>
+                                <span id="mujerValue-1"></span><br><span style="font-weight: bold;">Mujeres</span>
+                            </td>
+                            <td>
+                                <div id="hombreDiv-1" src="img/Iconos_Beneficiarios/hombre.svg" style="width: 50px;height: 50px;"></div>
+                                <span id="hombreValue-1"></span><br><span style="font-weight: bold;">Hombres</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+
+            <!-- textos-->
+
+            <div class="btnnewnew btnnewnew-grafico" id="tn1" class="menu2" style="left:1075px !important ;top:355px;  width: 200px !important;position: absolute !important;z-index: 101;color:gray;font-size: 14px;font-weight: bold;">
+                1.314
+            </div>
+            <div  class="btnnewnew btnnewnew-grafico" id="txt1" class="menu2" style="left:1075px !important ;top:370px;  width: 200px !important;position: absolute !important;z-index: 101;color:gray;font-size: 14px;font-weight: bold;">
+                #Proyectos Ejecutados
+            </div>
+            
+            <div class="btnnewnew btnnewnew-moneda" id="tn2" class="menu2" style="left:1075px !important ;top:455px;  width: 200px !important;position: absolute !important;z-index: 101;color:gray;font-size: 14px;font-weight: bold;">
+                735.399
+            </div>
+            <div  class="btnnewnew btnnewnew-moneda" id="txt2" class="menu2" style="left:1075px !important ;top:470px;  width: 200px !important;position: absolute !important;z-index: 101;color:gray;font-size: 14px;font-weight: bold;">
+                Inversion MM
+            </div>
+            
+            <div  class="btnnewnew btnnewnew-equipo" id="tn3" class="menu2" style="left:1075px !important ;top:555px;  width: 200px !important;position: absolute !important;z-index: 101;color:gray;font-size: 14px;font-weight: bold;">
+                263.954
+            </div>
+            <div  class="btnnewnew btnnewnew-equipo" id="txt3" class="menu2" style="left:1075px !important ;top:570px;  width: 200px !important;position: absolute !important;z-index: 101;color:gray;font-size: 14px;font-weight: bold;">
+                #Beneficiarios 
+            </div>
+
+            
+            <!-- linea punteada-->
+
             <div class="col-sm-8">
                 <div class="row" >
                     <div >
@@ -54,10 +176,10 @@
 
             <div class="row">
 
-                <div class="col-sm-3 grafic1">
+                <div class="col-sm-3 grafic1" style="z-index: 1000">
                     <div class="card">
                         <div class="card-body">
-                            <canvas id="circlemap" style="height:250vh; width:80vw"></canvas>
+                            <canvas id="circlemap" width="300"  style="width: 300px"></canvas>
                         </div>
                     </div>
                     <div class="card" >
@@ -70,7 +192,7 @@
                                     <table></table>
                                 </div>
                             </div>
-                            <canvas id="circlemap1" style="height:500vh; width:300vw"></canvas>
+                            <canvas id="circlemap1" width="300"  style="width: 300px"></canvas>
                         </div>
                     </div>
                 </div>
@@ -91,8 +213,9 @@
                 <div class="col-sm-5 depav-view" style="display: none">
                     <div class="card">
                         <div class="card-body">
+                            <div class="description-dpto"></div>
                             <div data-scale="0" id='depav' style="width: 100%; position: relative"></div>
-                            <div class="description"></div>
+
                         </div>
                     </div>
                 </div>
@@ -103,143 +226,152 @@
 
                 <!--Columna principal 2-->
                 <div class="col-sm-4">
-                    <div class="table-tooltip"></div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div id="et">
-                                <div id="e1" class="ee">
-                                    <div id="moneda-table-table-tooltip" style="display: none" >
-                                        <table id="moneda-table" class="table table-striped table-dark table-bordered">
-                                            <thead class="thead-dark">
-                                            <tr>
-                                                <th scope="col">FoNC</th>
-                                                <th scope="col">TerCeros</th>
-                                                <th scope="col">RP</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td id="fonc"></td>
-                                                <td id="tercero"></td>
-                                                <td id="rp"></td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                    <div id="circle-menu-act" class="row">
 
-                                    <a data-id="moneda" href="javascript:void(0)">
-                                        <div style="position: relative; bottom: -5px; right: 20px;top: -160px">
-                                            <div style="width: 364%;position: relative;right: 67px">
-                                                <b><span id="inversionTotal">0</span> <br>Inversión MM</b>
-                                            </div>
-                                            <div id="monedaDiv" class="c1" src="img/iconos/monedas.svg"></div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="ec">
-                                    <div id="e2" class="ee">
-                                        <div id="equipo-table-table-tooltip" style="display: none">
-                                            <table class="table table-striped table-dark table-bordered">
+                        <div class="table-tooltip"></div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="et">
+                                    <div id="e1" class="ee">
+                                        <div id="moneda-table-table-tooltip" style="display: none" >
+                                            <table id="moneda-table" class="table table-striped table-dark table-bordered">
+                                                <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">FoNC</th>
+                                                    <th scope="col">TerCeros</th>
+                                                    <th scope="col">RP</th>
+                                                </tr>
+                                                </thead>
                                                 <tbody>
                                                 <tr>
-                                                    <td>
-                                                        <div id="afroDiv" src="img/Iconos_Beneficiarios/Etnia.svg"  style="width: 50px;height: 50px;"></div>
-                                                        <span id="afroValue"></span><br><span style="font-weight: bold;">Afro</span>
-                                                    </td>
-                                                    <td>
-                                                        <div id="jovenDiv" src="img/Iconos_Beneficiarios/chico.svg" style="width: 50px;height: 50px;"></div>
-                                                        <span id="joveValue"></span><br><span style="font-weight: bold;">Jovenes</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div id="mujerDiv" src="img/Iconos_Beneficiarios/mujer.svg" style="width: 50px;height: 50px;"></div>
-                                                        <span id="mujerValue"></span><br><span style="font-weight: bold;">Mujeres</span>
-                                                    </td>
-                                                    <td>
-                                                        <div id="hombreDiv" src="img/Iconos_Beneficiarios/hombre.svg" style="width: 50px;height: 50px;"></div>
-                                                        <span id="hombreValue"></span><br><span style="font-weight: bold;">Hombres</span>
-                                                    </td>
+                                                    <td id="fonc"></td>
+                                                    <td id="tercero"></td>
+                                                    <td id="rp"></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <a data-id="equipo"  href="javascript:void(0)">
-                                            <div style="position: relative; left: 10px;top: -190px">
-                                                <div style="width: 105px;position: relative;left: -110px;top: 51px;">
-                                                    <b><span id="total_beneficiario">0</span><br>#Beneficarios</b>
+    
+                                        <a data-id="moneda" href="javascript:void(0)">
+                                            <div style="position: relative; bottom: -5px; right: 20px;top: -160px">
+                                                <div style="width: 364%;position: relative;right: 67px">
+                                                    <b><span id="inversionTotal">0</span> <br>Inversión MM</b>
                                                 </div>
-                                                <div id="equipoDiv" class="c5" src="img/iconos/trabajo-en-equipo.svg" ></div>
+                                                <div id="monedaDiv" class="c1" src="img/iconos/monedas.svg"></div>
                                             </div>
                                         </a>
                                     </div>
-
-                                    <div id="e3" class="ee">
-
-
-                                        <a data-id="marcador" href="javascript:void(0)">
-                                            <div style="position: relative; left: -26px;top:-195px">
-                                                <div style="width: 120px;position: relative;left: 70px;top: 51px;">
-                                                    <b>18<br>Dependencias</b>
-                                                </div>
-                                                <div id="marcadorDiv" class="c2" src="img/iconos/marcador-de-posicion.svg"></div>
+    
+                                    <div class="ec">
+                                        <div id="e2" class="ee">
+                                            <div id="equipo-table-table-tooltip" style="display: none">
+                                                <table class="table table-striped table-dark table-bordered">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div id="afroDiv" src="img/Iconos_Beneficiarios/Etnia.svg"  style="width: 50px;height: 50px;"></div>
+                                                            <span id="afroValue"></span><br><span style="font-weight: bold;">Afro</span>
+                                                        </td>
+                                                        <td>
+                                                            <div id="jovenDiv" src="img/Iconos_Beneficiarios/chico.svg" style="width: 50px;height: 50px;"></div>
+                                                            <span id="joveValue"></span><br><span style="font-weight: bold;">Jovenes</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div id="mujerDiv" src="img/Iconos_Beneficiarios/mujer.svg" style="width: 50px;height: 50px;"></div>
+                                                            <span id="mujerValue"></span><br><span style="font-weight: bold;">Mujeres</span>
+                                                        </td>
+                                                        <td>
+                                                            <div id="hombreDiv" src="img/Iconos_Beneficiarios/hombre.svg" style="width: 50px;height: 50px;"></div>
+                                                            <span id="hombreValue"></span><br><span style="font-weight: bold;">Hombres</span>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ec">
-                                    <div id="e4" class="ee">
-                                        <div id="grafico-table-table-tooltip" style="display: none">
-                                            <table class="table table-striped table-dark table-bordered">
-                                                <tbody>
-                                                <tr>
-                                                    <td> <span style="text-align: left !important;font-size: 30px;" id="infraestructuraValue"></span><br><span>Infraestructura</span> </td>
-                                                </tr>
-                                                <tr>
-                                                    <td> <span style="text-align: left;font-size: 30px;" id="productividadValue"></span><br><span>Productividad</span> </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span style="text-align: left; font-size: 30px;" id="cuidadoRecursosNaturales"></span><br><span>Cuidado de Recursos Naturales</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span style="text-align: left;font-size: 30px;" id="costosProduccion"></span><br><span>Costos de Producción</span> </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                                            <a data-id="equipo"  href="javascript:void(0)">
+                                                <div style="position: relative; left: 10px;top: -190px">
+                                                    <div style="width: 105px;position: relative;left: -110px;top: 51px;">
+                                                        <b><span id="total_beneficiario">0</span><br>#Beneficarios</b>
+                                                    </div>
+                                                    <div id="equipoDiv" class="c5" src="img/iconos/trabajo-en-equipo.svg" ></div>
+                                                </div>
+                                            </a>
                                         </div>
-
-                                        <a data-id="grafico" href="javascript:void(0)">
-                                            <div style="position: relative; bottom: 44px; left: -10px;top: -190px">
-                                                <div style="width: 200px;position: relative;left: -122px;top: 92px">
-                                                    <b><span id="total_proyecto">0</span><br># Proyectos Ejecutados</b>
+    
+                                        <div id="e3" class="ee">
+    
+    
+                                            <a data-id="marcador" href="javascript:void(0)">
+                                                <div style="position: relative; left: -26px;top:-195px">
+                                                    <div style="width: 120px;position: relative;left: 70px;top: 51px;">
+                                                        <b>18<br>Dependencias</b>
+                                                    </div>
+                                                    <div id="marcadorDiv" class="c2" src="img/iconos/marcador-de-posicion.svg"></div>
                                                 </div>
-                                                <div id="graficoDiv" class="c4" src="img/iconos/grafico-de-lineas.svg"></div>
-                                            </div>
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div id="e5" class="ee">
-
-                                        <a data-id="crecimiento" href="javascript:void(0)">
-                                            <div style="position: relative; bottom: 44px; left: -6px;top: -195px">
-                                                <div style="width: 200px;position: relative;left: -32px;top: 92px">
-                                                    <b>3,67<br> Apalancamiento</b>
-                                                </div>
-                                                <div id="crecimientoDiv" class="c3" src="img/iconos/crecimiento.svg"></div>
+                                    <div class="ec">
+                                        <div id="e4" class="ee">
+                                            <div id="grafico-table-table-tooltip" style="display: none">
+                                                <table class="table table-striped table-dark table-bordered">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td> <span style="text-align: left !important;font-size: 30px;" id="infraestructuraValue"></span><br><span>Infraestructura</span> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> <span style="text-align: left;font-size: 30px;" id="productividadValue"></span><br><span>Productividad</span> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span style="text-align: left; font-size: 30px;" id="cuidadoRecursosNaturales"></span><br><span>Cuidado de Recursos Naturales</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span style="text-align: left;font-size: 30px;" id="costosProduccion"></span><br><span>Costos de Producción</span> </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
-                                        </a>
-
+    
+                                            <a data-id="grafico" href="javascript:void(0)">
+                                                <div style="position: relative; bottom: 44px; left: -10px;top: -190px">
+                                                    <div style="width: 200px;position: relative;left: -122px;top: 92px">
+                                                        <b><span id="total_proyecto">0</span><br># Proyectos Ejecutados</b>
+                                                    </div>
+                                                    <div id="graficoDiv" class="c4" src="img/iconos/grafico-de-lineas.svg"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="e5" class="ee">
+    
+                                            <a data-id="crecimiento" href="javascript:void(0)">
+                                                <div style="position: relative; bottom: 44px; left: -6px;top: -195px">
+                                                    <div style="width: 200px;position: relative;left: -32px;top: 92px">
+                                                        <b>3,67<br> Apalancamiento</b>
+                                                    </div>
+                                                    <div id="crecimientoDiv" class="c3" src="img/iconos/crecimiento.svg"></div>
+                                                </div>
+                                            </a>
+    
+                                        </div>
                                     </div>
                                 </div>
+    
                             </div>
-
                         </div>
+                    </div>
+
+
+                    <div class="row" id="placehd" style="height: 350px;">
+
+                        
                     </div>
                     <div class="card shadow noticia" >
                         <div class="card-body" style="position: relative;top: -30px">
-                            <h2><b><span class="linea-card">|</span><span class="text-noticia">Noticias</span></b></h2>
-                            <div class="uno">
-                                <div class="scroller">
+                            <h2><b><span class="linea-card">|</span><span id="text-noticia" class="text-noticia">Noticias</span></b></h2>
+                            <div id="sectionUno">
+                                <div id="noticiaDiv">
                                     <p style="font-size: 12px" >
                                         La FNC ha consolidado y fortalecido su capadidad de
                                         gestión de proyectos, dotándola de la herramientas que le
@@ -248,29 +380,37 @@
                                         cafetea esta alinenado con los objetivos de la estrategia
                                         de valor de la Federación y por lo tanto con los intereses de los
                                         caficultores de Colombia.
-                                        <br>asasda                                        <br>asadsad
-                                        <br>asdasadsa
-                                        <br>asdasdasda
-                                        <br>asdasdasdaa
-                                        <br>asdasdasdaa
-                                        <br>asdasadsa
-                                        <br>asdasdasda
-                                        <br>asdasdsdad
-                                        <br>asdadadada
-                                        <br>asdasdasdad
                                     </p>
+                                </div>
+
+                                <div id="indicadoresDiv" class="scroller" style="display:none;">
+
+                                    <h3 style="font-size: 12px;left: 20px;"><span style="font-weight: bold;left: 20px;">1.137 </span> <span >Marquesinas Construidas</span> </h3>
+                                    <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">3.295 </span> <span>Hectáreas Fertilizadas</span> </h3>
+                                    <h3 style="font-size: 12px"><span style="font-weight: bold;left: 20px;">175   </span> <span>Beneficiaderos Mejorados</span> </h3>
+                                    <h3 style="font-size: 12px;"><span style="font-weight: bold;left: 20px;">231   </span> <span>STAR Construidos</span> </h3>
+                                    <h3 style="font-size: 12px"><span style="font-weight: bold;left: 20px;">470   </span> <span>Vías Intervenidos</span></h3>
+                                    <br>
+                                </div>
+
+                                <div id="proyectosDiv" style="display:none;">
+                                    <h3 style="font-size: 12px;left: 20px;"> <span >Prog. Renovación de cafetales ituango</span> </h3>
+                                    <h3 style="font-size: 12px;left: 20px;"> <span >Prog Sostenib. de cafetales ituango</span> </h3>
+                                    <h3 style="font-size: 12px;left: 20px;"> <span >Const. Vivienda varias veredas ituango</span> </h3>
+                                    <h3 style="font-size: 12px;left: 20px;"> <span >Mantenimiento Caminos veredales ituango</span> </h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="grafic2" class="grafic2" style="position: relative; bottom: 250px; display: none">
-                    <div class="row" style="max-width: 800px">
+
+                <div id="grafic2" class="grafic2" style="position: relative; bottom: 200px; display: none">
+                    <div class="row" >
                         <div id="divCirclemap3" class="col-md-6">
-                            <canvas id="circlemap3"  width="1000" height="1000" ></canvas>
+                            <canvas id="circlemap3"  width="300" style="width: 300px"></canvas>
                         </div>
                         <div id="divCirclemap4" class="col-md-6">
-                            <div id="circlemap1-tooltip1" class="table-tooltip1">
+                            <div id="circlemap1-tooltip1" class="table-tooltip1" >
                                 <div>
                                     <button onclick="$('#circlemap1-tooltip1').removeClass('active')" style="color: #ffffff" type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -278,7 +418,7 @@
                                     <table></table>
                                 </div>
                             </div>
-                            <canvas id="circlemap4" width="600" height="600" ></canvas>
+                            <canvas id="circlemap4" width="300"  style="width: 300px"></canvas>
                         </div>
                     </div>
                 </div>
@@ -302,13 +442,17 @@
 <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/20.2.4/css/dx.common.css">
 <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/20.2.4/css/dx.light.css">
 
-<!-- DevExtreme library -->
-<script type="text/javascript" src="https://cdn3.devexpress.com/jslib/20.2.4/js/dx.all.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+<script src="https://emn178.github.io/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
 <script src="js/donut-chart.js"></script>
 <script src="js/Api.js"></script>
 <script src="js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.js"></script>
 <script src="js/chart.js"></script>
 
 

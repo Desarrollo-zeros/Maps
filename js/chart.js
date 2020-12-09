@@ -1,8 +1,28 @@
 
 
-var circlemapConfig =  {
-    title: {
+var circlemapConfig = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+        labels: [
+            {
+                render: 'label',
+                fontColor: '#000',
+                position: 'outside'
+            }
+        ]
+    },
+    legend: {
         display: true,
+        position: 'bottom',
+    }
+};
+
+/*var circlemapConfig =  {
+    responsive: true,
+    maintainAspectRatio: false,
+    title: {
+        display: false,
         //text: 'Recommended Daily Diet',
         position: 'top',
         fontSize: 16,
@@ -10,7 +30,7 @@ var circlemapConfig =  {
         padding: 20
     },
     legend: {
-        display: true,
+        display: false,
         position: 'bottom',
         labels: {
             boxWidth: 20,
@@ -32,9 +52,19 @@ var circlemapConfig =  {
                 return value + '%';
             }
         },
+        labels: [
+            {
+                render: 'label',
+                position: 'outside'
+            },
+
+        ]
 
     }
-}
+}*/
+
+
+
 
 var circleMapData = {
     labels: ['Gob', 'Inter', ' Org nal Pri', 'Org nal Pub', 'Mun'],
@@ -74,6 +104,13 @@ function createChart(id, type, options) {
             }
         ]
     };
+
+    new Chart(document.getElementById(id), {
+        type: type,
+        data: data,
+        options: options
+    });
+
 }
 
 
@@ -82,6 +119,16 @@ function createChart(id, type, options) {
 
 
 var donutOptions1 = {
+    responsive: true,
+    maintainAspectRatio: false,
+    title: {
+        display: false,
+        //text: 'Recommended Daily Diet',
+        position: 'top',
+        fontSize: 16,
+        fontColor: '#111',
+        padding: 20
+    },
     cutoutPercentage: 40,
     legend: {
         display: true,
@@ -121,15 +168,26 @@ var donutOptions1 = {
                 var bodyLines = tooltipModel.body.map(getBody);
 
                 var innerHtml = '<thead>';
-
+                let url = "";
                 titleLines.forEach(function(title) {
                     innerHtml += '<tr><th>' + title + '</th></tr>';
+                    if(title.toLowerCase().includes("economico")){
+                        url = "https://federaciondecafeteros.org/sostenibilidad/eje-economico/";
+                    }else if(title.toLowerCase().includes("social")){
+                        url = "https://federaciondecafeteros.org/sostenibilidad/eje-social/";
+                    }
+                    else if(title.toLowerCase().includes("gobernaza")){
+                        url = "https://federaciondecafeteros.org/sostenibilidad/eje-gobernaza/";
+                    }
+                    else if(title.toLowerCase().includes("ambiental")){
+                        url = "https://federaciondecafeteros.org/sostenibilidad/eje-ambiental/";
+                    }
                 });
                 innerHtml += '</thead><tbody>';
                 console.log(bodyLines);
                 let html = "<hr><span>Buscamos Contribuir a la rentabilidad del caficultor" +
                     "<br>" +
-                    "<a style='font-size: 12px; text-decoration: none; color: #ffffff' href='#'>Enlace a la selección Sostenibilidad</a></span><hr>";
+                    "<a style='font-size: 12px; text-decoration: none; color: #ffffff' href='"+url+"' target='_blank'>Enlace a la selección Sostenibilidad</a></span><hr>";
                 bodyLines.forEach(function(body, i) {
                     var colors = tooltipModel.labelColors[i];
                     var style = 'background:' + colors.backgroundColor;
@@ -152,7 +210,7 @@ var donutOptions1 = {
         },
         callbacks: {
             title: function(tooltipItem, data) {
-                return  ("Eje"+" "+data['labels'][tooltipItem[0]['index']]).toUpperCase() + " #" +api.dataEjeInidicativo1[data['labels'][tooltipItem[0]['index']]].total;
+                return  ("Eje"+" "+data['labels'][tooltipItem[0]['index']]).toUpperCase();
             },
             label: function(tooltipItem, data) {
                 return data['datasets'][0]['data'][tooltipItem['index']];
@@ -170,6 +228,14 @@ var donutOptions1 = {
         bodyFontColor: '#000',
         bodyFontSize: 14,
         displayColors: false
+    },
+    plugins: {
+        labels: [
+            {
+                render: 'label',
+                position: 'outside'
+            }
+        ]
     }
 };
 var chDonutData1 = {
@@ -206,6 +272,8 @@ var circlemap3Chart;
 var circlemap3;
 var chDonut3;
 var chDonut3Chart;
+var chDonut4;
+var chDonut4Chart;
 
 function cargarNewCircle(){
 
