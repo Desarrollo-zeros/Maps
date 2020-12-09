@@ -359,6 +359,8 @@ $(document).ready(function (){
             }
         });
 
+
+        $tableTooltip = $(".table-tooltip");
         $(".ee a").hover(function (){
            var id = $(this).attr("data-id");
             $(this).find("b").css("color","#960303")

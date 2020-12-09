@@ -163,6 +163,17 @@ class Api{
             console.log(error);
         });
     }
+    getVieEjeIndicativo3 = function ($data = {}, sucessCallBack, falloCallback){
+        const  _self = this;
+        $data.anio = $("#selectAnoCargue").val();
+        $data.type = 0;
+        $data.table = "view_indicadores";
+        $data.dpto = nameDpto;
+        $data.municipio = nameMunicipio;
+        _self.post("get_data_nfc", $data,sucessCallBack, falloCallback);
+    }
+
+
 }
 
 const  api = new Api();
@@ -392,6 +403,11 @@ function getLoad(){
 
     });
 
+
+
+   api.getVieEjeIndicativo3({},function (data){
+      console.log(data)
+   });
 
 }
 

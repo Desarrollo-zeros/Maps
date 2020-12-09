@@ -20,19 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a4f951b-d1fa-4c28-8f11-ee65fdc234bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/departamentos/Antioquia1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/departamentos/Boyaca1.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/departamento.html" beforeDir="false" afterPath="$PROJECT_DIR$/departamento.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/departamentos organizados/Antioquia.svg" beforeDir="false" afterPath="$PROJECT_DIR$/departamentos organizados/Antioquia.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/departamentos organizados/Boyaca.svg" beforeDir="false" afterPath="$PROJECT_DIR$/departamentos organizados/Boyaca.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/departamentos/Antioquia.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/departamentos/Antioquia.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/departamentos/Boyaca.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/departamentos/Boyaca.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/departamento.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/departamento.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +100,7 @@
       <workItem from="1607343565308" duration="1217000" />
       <workItem from="1607486043520" duration="10000" />
       <workItem from="1607492236349" duration="5475000" />
-      <workItem from="1607521863786" duration="14462000" />
+      <workItem from="1607521863786" duration="16816000" />
     </task>
     <servers />
   </component>

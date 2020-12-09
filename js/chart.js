@@ -9,6 +9,9 @@ var circlemapConfig = {
                 render: 'label',
                 fontColor: '#000',
                 position: 'outside'
+            },
+            {
+                render: 'percentage'
             }
         ]
     },
@@ -122,7 +125,7 @@ var donutOptions1 = {
     responsive: true,
     maintainAspectRatio: false,
     title: {
-        display: false,
+        display: true,
         //text: 'Recommended Daily Diet',
         position: 'top',
         fontSize: 16,
@@ -234,6 +237,9 @@ var donutOptions1 = {
             {
                 render: 'label',
                 position: 'outside'
+            },
+            {
+                render: 'percentage'
             }
         ]
     }
